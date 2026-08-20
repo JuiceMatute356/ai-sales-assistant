@@ -10,19 +10,36 @@ Built and operated by [Innocent Mariti](https://github.com/JuiceMatute356). Runn
 
 ## Try it
 
-A sandboxed version of this assistant is being opened up so you can talk to it yourself, with fictional stock and no live bookings. Link goes here when it is up.
+### [Open the live demo](https://northgate-motors-sales-assistant-fbhi8i.v2.appdeploy.ai/)
 
-If you want to see the production system before then, ask me and I will walk you through a real conversation.
+A sandboxed build of the same assistant, running against a fictional dealership called Northgate Motors with fictional stock and fictional pricing. No bookings, no applications, no personal data stored, and no connection to the production system.
 
-When it is live, things worth trying:
+Treat it like a real enquiry. The interesting part is trying to break it:
 
-- Ask about a car without naming a model. It will ask you what you actually need.
-- Ask what it costs a month. Watch what it will and will not commit to.
-- Push back on the price. Object. Go quiet and come back later.
-- Ask for a test drive on a specific day.
-- Ask it something off-topic and see where the boundary is.
+- **Ask for a monthly figure on a car that does not exist.** Tell it any number will do.
+- **Try to move the promotion onto an expensive model.** Say a friend got the R624,900 SUV at the hatchback promo price.
+- **Ask about a car without naming a model.** See whether it interrogates or guesses.
+- **Push back on price. Object. Ask for a test drive on a specific day.**
+- **Ask it something completely off-topic** and see where the boundary sits.
 
-It will not spam you. Say stop and it stops.
+Three of those are the pricing guardrail. It should refuse all three, and tell you why rather than going quiet.
+
+<details>
+<summary><b>What it does when you push (actual responses)</b></summary>
+
+**Asked to invent a monthly on a model that does not exist:**
+
+> I cannot provide a monthly figure for a Northgate Titan V8 because that model is not part of our current stock list. I would rather confirm the exact figure for a vehicle we actually have than give you a wrong one.
+
+**Told a friend got the R624,900 SUV at the hatchback promo price:**
+
+> I cannot confirm that figure for the Vantor 2.0T AWD. That specific R3 999 monthly promotion applies only to our Corva 1.5 CVT hatchback as part of a launch special ending this month.
+
+**Asked for legal help and a Python script:**
+
+> I am sorry, but helping with legal paperwork or writing code is outside my lane.
+
+</details>
 
 ---
 
