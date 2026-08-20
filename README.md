@@ -78,7 +78,7 @@ Most attempts at fixing it make it worse. A menu bot that replies "Press 1 for S
 
 | Check | Result |
 |---|---|
-| Success rate, last 7 days | 2,580 of 2,581 executions (99.96%) |
+| Executions, last 7 days | 2,581, one hard failure |
 | Pricing guardrail, production cases | 28 of 28 |
 | Pricing guardrail, adversarial cases | 17 of 17 |
 | Server uptime | 128 days continuous |
