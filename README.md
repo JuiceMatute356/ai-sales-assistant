@@ -126,4 +126,4 @@ Happy to walk through any of it in an interview, including the parts that broke.
 - Email: innocentmariti@gmail.com
 - LinkedIn: [innocent-mariti](https://www.linkedin.com/in/innocent-mariti-27a4b552)
 - Site: [maritico.co.za](https://maritico.co.za)
-- CV: [Innocent_Mariti_CV_AI_Automation_Engineer.pdf](cv/Innocent_Mariti_CV_AI_Automation_Engineer.pdf)
+- CV: [Innocent_Mariti_CV.pdf](cv/Innocent_Mariti_CV.pdf)
