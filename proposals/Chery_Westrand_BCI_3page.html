@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Chery Westrand · Fleet Proposal for BCI Security</title>
+<style>
+  @font-face{ font-family:'Playfair Display'; src:url('fonts/Playfair.ttf') format('truetype'); font-weight:400 900; font-style:normal; }
+  @font-face{ font-family:'Playfair Display'; src:url('fonts/Playfair-Italic.ttf') format('truetype'); font-weight:400 900; font-style:italic; }
+  @font-face{ font-family:'InterV'; src:url('fonts/Inter.ttf') format('truetype'); font-weight:100 900; font-style:normal; }
+
+  :root{
+    --paper:#FAF7F0; --card:#F1EADC;
+    --ink:#21201C; --ink-soft:#4C473E; --muted:#8C8375;
+    --gold:#9C7A2E; --gold-light:#B9A066; --line:#E4DDCE;
+    --dark:#1A1917; --bci-red:#D71920;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  body{ font-family:'InterV',-apple-system,'Helvetica Neue',Arial,sans-serif; color:var(--ink); background:#D8D2C6; -webkit-font-smoothing:antialiased; }
+  .serif{ font-family:'Playfair Display',Georgia,serif; }
+  .sheet{ width:210mm; min-height:297mm; background:var(--paper); margin:0 auto 10px; position:relative; overflow:hidden; padding:15mm 16mm; display:flex; flex-direction:column; }
+
+  img.chery{ mix-blend-mode:multiply; display:block; }
+  .bci-chip{ background:var(--dark); border-radius:5px; display:inline-flex; align-items:center; justify-content:center; padding:8px 11px; }
+  .bci-chip img{ display:block; }
+  .ph{ color:var(--gold); font-style:italic; border-bottom:1px dotted var(--gold-light); padding:0 1px; white-space:nowrap; }
+  .gold{ color:var(--gold); }
+
+  /* masthead (p1) */
+  .mast{ display:flex; justify-content:space-between; align-items:center; }
+  .mast .l{ display:flex; align-items:center; gap:14px; }
+  .mast .l img.chery{ height:40px; }
+  .mast .x{ font-family:'Playfair Display',serif; color:var(--gold); font-size:13px; }
+  .mast .bci-chip img{ height:26px; }
+  .mast .r{ text-align:right; font-size:8.5px; letter-spacing:2px; text-transform:uppercase; color:var(--muted); font-weight:600; line-height:1.7; }
+
+  /* hero */
+  .hero{ margin-top:16px; border-radius:7px; overflow:hidden; box-shadow:0 10px 30px rgba(20,20,20,.14); }
+  .hero img{ width:100%; display:block; }
+  .hero-cap{ display:flex; justify-content:space-between; align-items:center; margin-top:8px; font-size:8.5px; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted); }
+  .hero-cap .rd{ color:var(--bci-red); font-weight:700; }
+
+  .p1-for{ font-size:10.5px; letter-spacing:3px; text-transform:uppercase; color:var(--gold); font-weight:600; margin-top:24px; }
+  h1.head{ font-family:'Playfair Display',serif; font-size:50px; line-height:1.04; font-weight:600; color:var(--ink); letter-spacing:-0.5px; margin-top:12px; }
+  h1.head .dot{ color:var(--gold); }
+  .p1-title{ font-family:'Playfair Display',serif; font-size:16px; color:var(--gold); font-style:italic; margin-top:14px; }
+  .p1-sub{ font-size:13px; line-height:1.72; color:var(--ink-soft); max-width:155mm; margin-top:8px; }
+
+  /* offer stat box */
+  .offer{ margin-top:auto; border:1px solid var(--line); border-radius:8px; background:var(--card); display:grid; grid-template-columns:repeat(4,1fr); overflow:hidden; }
+  .offer .cell{ padding:16px 18px; border-right:1px solid var(--line); }
+  .offer .cell:last-child{ border-right:none; }
+  .offer .v{ font-family:'Playfair Display',serif; font-size:22px; color:var(--ink); line-height:1; }
+  .offer .v .sm{ font-size:13px; }
+  .offer .v.g{ color:var(--gold); }
+  .offer .l{ font-size:8.5px; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted); font-weight:600; margin-top:7px; }
+
+  .p1-foot{ margin-top:16px; border-top:1px solid var(--line); padding-top:12px; display:flex; justify-content:space-between; }
+  .p1-foot .col{ font-size:9px; }
+  .p1-foot .col.c{ text-align:center; } .p1-foot .col.r{ text-align:right; }
+  .p1-foot .lbl{ letter-spacing:2px; text-transform:uppercase; color:var(--muted); font-weight:600; margin-bottom:5px; }
+  .p1-foot .val{ font-family:'Playfair Display',serif; font-size:12.5px; color:var(--ink); }
+
+  /* running header (p2,p3) */
+  .rh{ margin-bottom:18px; }
+  .rh-main{ display:flex; justify-content:space-between; align-items:center; }
+  .rh-main img.chery{ height:30px; }
+  .rh-right{ font-size:8.5px; letter-spacing:2px; text-transform:uppercase; color:var(--muted); font-weight:600; }
+  .rh-right b{ color:var(--gold); }
+  .rh-rule{ position:relative; height:1px; background:var(--line); margin-top:11px; }
+  .rh-rule::after{ content:''; position:absolute; right:0; top:0; width:150px; height:1px; background:var(--gold); }
+
+  .kicker{ font-size:9.5px; letter-spacing:3px; text-transform:uppercase; color:var(--gold); font-weight:600; }
+  .kicker-rule{ width:34px; height:1.5px; background:var(--gold); margin:9px 0 14px; }
+  h2.head{ font-family:'Playfair Display',serif; font-size:27px; line-height:1.12; font-weight:600; color:var(--ink); letter-spacing:-0.2px; }
+
+  .views{ margin-top:16px; border-radius:7px; overflow:hidden; border:1px solid var(--line); }
+  .views img{ width:100%; display:block; }
+  .views-cap{ margin-top:7px; font-size:8.5px; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted); text-align:center; }
+
+  .cols{ display:grid; grid-template-columns:1fr 1fr; gap:16px 30px; margin-top:4px; }
+  .grp-h{ font-size:9px; letter-spacing:2px; text-transform:uppercase; color:var(--gold); font-weight:600; padding-bottom:6px; border-bottom:1px solid var(--line); margin-bottom:9px; }
+  .chk{ list-style:none; }
+  .chk li{ position:relative; padding-left:19px; font-size:11px; line-height:1.45; color:var(--ink-soft); margin-bottom:7px; }
+  .chk li::before{ content:'\2713'; position:absolute; left:0; top:0; color:var(--gold); font-size:10.5px; }
+  .chk li b{ color:var(--ink); font-weight:600; }
+
+  .why{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:20px; }
+  .why .w h4{ font-family:'Playfair Display',serif; font-size:14px; color:var(--ink); margin-bottom:5px; }
+  .why .w p{ font-size:10.5px; line-height:1.55; color:var(--ink-soft); }
+
+  /* pricing */
+  .price-wrap{ display:grid; grid-template-columns:1.1fr 1fr; gap:34px; margin-top:6px; }
+  .pr-h{ font-size:9px; letter-spacing:2px; text-transform:uppercase; color:var(--gold); font-weight:600; padding-bottom:8px; border-bottom:1px solid var(--line); margin-bottom:2px; }
+  .pr-row{ display:flex; justify-content:space-between; align-items:baseline; padding:10px 0; border-bottom:1px solid var(--line); }
+  .pr-row .k{ font-size:11.5px; color:var(--ink-soft); }
+  .pr-row .v{ font-family:'Playfair Display',serif; font-size:15px; color:var(--ink); white-space:nowrap; padding-left:14px; }
+  .pr-row .v.g{ color:var(--gold); }
+  .pr-row.total .k{ color:var(--ink); font-weight:600; }
+  .pr-row.total .v{ font-size:21px; }
+  .own .o{ padding:10px 0; border-bottom:1px solid var(--line); }
+  .own .o .nm{ font-family:'Playfair Display',serif; font-size:14px; color:var(--ink); margin-bottom:2px; }
+  .own .o .ds{ font-size:10px; line-height:1.45; color:var(--muted); }
+
+  .commit{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:16px; }
+  .commit .c .n{ font-family:'Playfair Display',serif; font-size:16px; color:var(--gold); }
+  .commit .c h4{ font-size:11px; color:var(--ink); font-weight:700; margin:3px 0 4px; }
+  .commit .c p{ font-size:9.5px; line-height:1.5; color:var(--ink-soft); }
+
+  .next{ margin-top:18px; border-top:1px solid var(--line); padding-top:16px; display:flex; justify-content:space-between; align-items:flex-end; }
+  .next .l{ max-width:115mm; }
+  .next .l .nh{ font-family:'Playfair Display',serif; font-size:17px; color:var(--ink); margin-bottom:6px; }
+  .next .l p{ font-size:10.5px; line-height:1.6; color:var(--ink-soft); }
+  .next .l .sig{ margin-top:12px; font-family:'Playfair Display',serif; font-size:15px; color:var(--ink); }
+  .next .l .role{ font-size:9px; color:var(--muted); letter-spacing:.5px; margin-top:3px; }
+  .next .r{ text-align:right; display:flex; flex-direction:column; align-items:flex-end; gap:10px; }
+  .next .r img.chery{ height:30px; }
+  .next .r .bci-chip img{ height:22px; }
+
+  .foot-note{ margin-top:14px; font-size:8px; letter-spacing:1px; text-transform:uppercase; color:var(--muted); text-align:center; }
+
+  @page{ size:A4 portrait; margin:0; }
+  @media print{
+    body{ background:white; }
+    .sheet{ margin:0; box-shadow:none; page-break-after:always; }
+    .sheet:last-child{ page-break-after:auto; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== PAGE 1 ===== -->
+<section class="sheet">
+  <div class="mast">
+    <div class="l">
+      <span class="bci-chip"><img src="assets/bci_on_dark.png" alt="BCI Security"></span>
+      <span class="x serif">&times;</span>
+      <img class="chery" src="assets/chery_westrand.png" alt="Chery Westrand">
+    </div>
+    <div class="r">Fleet Mobility Proposal<br>Private &amp; Confidential</div>
+  </div>
+
+  <div class="hero">
+    <img src="assets/tiggo_hero.jpg" alt="Chery Tiggo Cross in BCI Security livery">
+  </div>
+  <div class="hero-cap">
+    <span>Chery Tiggo Cross 1.5 LiT CVT · shown in full BCI Security livery</span>
+    <span class="rd">Delivered ready for duty</span>
+  </div>
+
+  <div class="p1-for">BCI Security &times; CMH Westrand</div>
+  <h1 class="head">From business relationship<br>to fleet partnership<span class="dot">.</span></h1>
+  <div class="p1-title">Chery Tiggo Cross Fleet Mobility Proposal</div>
+  <div class="p1-sub">
+    A practical fleet solution built around your operation, your vehicles and your future requirements.
+  </div>
+
+  <div class="offer">
+    <div class="cell"><div class="v">15</div><div class="l">Vehicles</div></div>
+    <div class="cell"><div class="v g">8%</div><div class="l">Fleet discount</div></div>
+    <div class="cell"><div class="v"><span class="sm">R</span> 285 108</div><div class="l">Net per vehicle</div></div>
+    <div class="cell"><div class="v"><span class="sm">R</span> 4 276 620</div><div class="l">Net fleet total</div></div>
+  </div>
+
+  <div class="p1-foot">
+    <div class="col"><div class="lbl">Prepared for</div><div class="val">BCI Security · <span class="ph">[Fleet Manager]</span></div></div>
+    <div class="col c"><div class="lbl">Prepared by</div><div class="val">CMH Westrand · Innocent Mariti</div></div>
+    <div class="col r"><div class="lbl">Date</div><div class="val">2 October 2026</div></div>
+  </div>
+</section>
+
+<!-- ===== PAGE 2 ===== -->
+<section class="sheet">
+  <div class="rh">
+    <div class="rh-main">
+      <img class="chery" src="assets/chery_westrand.png" alt="Chery Westrand">
+      <div class="rh-right">Fleet Proposal &nbsp;|&nbsp; <b>For BCI Security</b> &nbsp;·&nbsp; 02</div>
+    </div>
+    <div class="rh-rule"></div>
+  </div>
+
+  <div class="kicker">The vehicle, in your colours</div>
+  <div class="kicker-rule"></div>
+  <h2 class="head">Built for security work, dressed in BCI.</h2>
+
+  <div class="views">
+    <img src="assets/tiggo_views.jpg" alt="Chery Tiggo Cross BCI livery, multiple views with dimensions">
+  </div>
+  <div class="views-cap">Full BCI livery shown across every angle · Top, front, rear and profile · Light bar and unit identifiers to specification</div>
+
+  <div class="cols" style="margin-top:18px;">
+    <div>
+      <div class="grp-h">Engine &amp; economy</div>
+      <ul class="chk">
+        <li><b>1.5 L</b> petrol, naturally aspirated, <b>83 kW</b> / <b>170 N·m</b></li>
+        <li><b>CVT</b> automatic, front-wheel drive</li>
+        <li>Claimed <b>7.3 L/100 km</b>, 51 litre tank</li>
+      </ul>
+      <div class="grp-h" style="margin-top:14px;">Safety</div>
+      <ul class="chk">
+        <li><b>Four airbags</b>, ABS, EBD</li>
+        <li>Electronic stability &amp; traction control</li>
+        <li>Tyre-pressure monitoring, reverse camera, ISOFIX</li>
+      </ul>
+    </div>
+    <div>
+      <div class="grp-h">Comfort &amp; technology</div>
+      <ul class="chk">
+        <li><b>10.25&Prime;</b> dual touchscreen, digital cluster</li>
+        <li>Cruise control, Bluetooth, LED headlamps</li>
+        <li>Keyless entry &amp; start, leatherette, air-con</li>
+      </ul>
+      <div class="grp-h" style="margin-top:14px;">Dimensions &amp; cover</div>
+      <ul class="chk">
+        <li><b>4 320 &times; 1 831 &times; 1 652 mm</b>, 380 L boot, 5 seats</li>
+        <li>Warranty <b>5 yr / 150 000 km</b>, engine <b>10 yr / 1 M km</b></li>
+        <li>Service plan <b>3 yr / 45 000 km</b></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="why">
+    <div class="w"><h4>Presence</h4><p>SUV stance and a marked fleet that deters on sight and advertises BCI every hour it is on the road.</p></div>
+    <div class="w"><h4>Low running cost</h4><p>A frugal engine and auto gearbox keep rand-per-kilometre down and officers fresh across long shifts.</p></div>
+    <div class="w"><h4>Hard to stop</h4><p>Class-leading warranty and a held-parts service plan cap downtime, so coverage is never short a vehicle.</p></div>
+  </div>
+
+  <p style="font-size:9px; color:var(--muted); margin-top:16px; line-height:1.6;">
+    Specifications verified against Chery South Africa and SA motoring sources, October 2026. Manufacturer claims for the standard 1.5 LiT CVT; final build, colours and livery confirmed at order.
+  </p>
+</section>
+
+<!-- ===== PAGE 3 ===== -->
+<section class="sheet">
+  <div class="rh">
+    <div class="rh-main">
+      <img class="chery" src="assets/chery_westrand.png" alt="Chery Westrand">
+      <div class="rh-right">Fleet Proposal &nbsp;|&nbsp; <b>For BCI Security</b> &nbsp;·&nbsp; 03</div>
+    </div>
+    <div class="rh-rule"></div>
+  </div>
+
+  <div class="kicker">The fleet, priced plainly</div>
+  <div class="kicker-rule"></div>
+  <h2 class="head">Fifteen vehicles, one clear number.</h2>
+
+  <div class="price-wrap">
+    <div>
+      <div class="pr-h">What you pay</div>
+      <div class="pr-row"><span class="k">Chery Tiggo Cross 1.5 LiT CVT, per unit (incl VAT)</span><span class="v">R 309 900</span></div>
+      <div class="pr-row"><span class="k">Fleet discount</span><span class="v g">8%</span></div>
+      <div class="pr-row"><span class="k">Net price per vehicle</span><span class="v">R 285 108</span></div>
+      <div class="pr-row total"><span class="k">Fleet of fifteen, net</span><span class="v">R 4 276 620</span></div>
+      <p style="font-size:9px; color:var(--muted); margin-top:10px; line-height:1.55;">
+        Retail is the current Chery South Africa figure and includes VAT. On-the-road costs, BCI livery and tracking are quoted separately: OTR <span class="ph">[R 0 000]</span>/unit · livery <span class="ph">[R 0 000]</span> · tracking <span class="ph">[R 0 000]</span>.
+      </p>
+    </div>
+    <div>
+      <div class="pr-h">How you own it</div>
+      <div class="own">
+        <div class="o"><div class="nm">Cash</div><div class="ds">Settled once. Full ownership, no finance cost. R 285 108 per vehicle.</div></div>
+        <div class="o"><div class="nm">Instalment</div><div class="ds"><span class="ph">[60]</span>-month term, <span class="ph">[10]</span>% deposit, from <span class="ph">[R 0 000]</span>/vehicle monthly. Subject to credit approval.</div></div>
+        <div class="o"><div class="nm">Full-maintenance lease</div><div class="ds">Fixed monthly, maintenance and tyres included, from <span class="ph">[R 0 000]</span>/vehicle.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="kicker" style="margin-top:22px;">What CMH Westrand commits to</div>
+  <div class="kicker-rule"></div>
+  <div class="commit">
+    <div class="c"><div class="n serif">1</div><h4>One fleet account</h4><p>A single named manager for orders, servicing and every query.</p></div>
+    <div class="c"><div class="n serif">2</div><h4>Uptime by design</h4><p>Servicing staggered across the fleet, common parts held.</p></div>
+    <div class="c"><div class="n serif">3</div><h4>Delivered ready</h4><p>Wrapped, licensed and road-ready, roughly three weeks from order.</p></div>
+    <div class="c"><div class="n serif">4</div><h4>Priced in the open</h4><p>Every figure confirmed in writing. No on-delivery surprises.</p></div>
+  </div>
+
+  <div class="next">
+    <div class="l">
+      <div class="nh">The next step</div>
+      <p>Let us bring a demonstration unit to your team and walk the numbers with whoever owns the fleet budget. No obligation. Name a day and we will be there. This offer is valid until <span class="ph">[31 October 2026]</span>.</p>
+      <div class="sig">Innocent Mariti</div>
+      <div class="role">Fleet Sales, CMH Westrand · 073 567 2508 · <span class="ph">[email]</span></div>
+    </div>
+    <div class="r">
+      <img class="chery" src="assets/chery_westrand.png" alt="Chery Westrand">
+      <span class="bci-chip"><img src="assets/bci_on_dark.png" alt="BCI Security"></span>
+    </div>
+  </div>
+
+  <div class="foot-note">Pricing and specifications indicative, subject to confirmation, stock and credit approval · E&amp;OE</div>
+</section>
+
+</body>
+</html>
