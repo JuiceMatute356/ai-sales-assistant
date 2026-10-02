@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CMH Wetland — Fleet Proposal for BCI Security Company</title>
+<style>
+  :root{
+    --ink:#161a1d;
+    --muted:#5c646c;
+    --line:#e3e6ea;
+    --accent:#b11116;      /* Chery red */
+    --accent-dk:#7d0c10;
+    --gold:#9a7b2e;
+    --bg-soft:#f7f8f9;
+    --ok:#1f7a4d;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    color:var(--ink);
+    font-size:11pt;
+    line-height:1.55;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+  @page{ size:A4; margin:18mm 16mm 20mm 16mm; }
+  .page{ page-break-after:always; position:relative; }
+  .page:last-child{page-break-after:auto;}
+
+  h1,h2,h3{line-height:1.2;margin:0;}
+  h2.section{
+    font-size:15pt;color:var(--accent);letter-spacing:.2px;margin:0 0 4px 0;
+    padding-bottom:6px;border-bottom:2px solid var(--accent);
+  }
+  h3{font-size:11.5pt;color:var(--ink);margin:16px 0 4px 0;}
+  p{margin:8px 0;}
+  .muted{color:var(--muted);}
+  .small{font-size:9.5pt;}
+  .lead{font-size:11.5pt;}
+  ul{margin:6px 0 10px 0;padding-left:18px;}
+  li{margin:3px 0;}
+
+  .ph{
+    background:#fff3e2;border-bottom:1px dashed var(--gold);padding:0 3px;border-radius:2px;
+    color:#7a5410;font-weight:600;white-space:nowrap;
+  }
+
+  /* cover */
+  .cover{min-height:261mm;display:flex;flex-direction:column;}
+  .cover-top{display:flex;justify-content:space-between;align-items:flex-start;}
+  .brandmark{display:flex;align-items:center;gap:12px;}
+  .logo{width:50px;height:50px;flex:none;}
+  .brandmark .name{font-size:20pt;font-weight:800;letter-spacing:1px;color:var(--ink);}
+  .brandmark .sub{font-size:8.5pt;letter-spacing:3px;color:var(--muted);text-transform:uppercase;}
+  .ref-box{text-align:right;font-size:9pt;color:var(--muted);line-height:1.7;}
+  .ref-box b{color:var(--ink);}
+
+  .cover-hero{
+    margin-top:40px;background:linear-gradient(135deg,#161a1d 0%,#2a2f34 100%);
+    border-radius:10px;padding:34px 34px 30px;color:#fff;position:relative;overflow:hidden;
+  }
+  .cover-hero:after{
+    content:"";position:absolute;right:-40px;top:-40px;width:220px;height:220px;
+    background:radial-gradient(circle,rgba(177,17,22,.55),transparent 70%);
+  }
+  .kicker{font-size:10pt;letter-spacing:4px;text-transform:uppercase;color:#e7b4b6;font-weight:700;}
+  .cover-hero h1{font-size:30pt;font-weight:800;margin:12px 0 0 0;line-height:1.1;}
+  .cover-hero .model{font-size:15pt;color:#ffd9da;margin-top:10px;font-weight:600;}
+  .cover-hero .rule{height:4px;width:110px;background:var(--accent);margin:20px 0 6px;}
+  .cover-hero .tagline{font-size:10.5pt;color:#c9ced3;max-width:78%;}
+
+  .parties{display:flex;gap:18px;margin-top:22px;}
+  .party{
+    flex:1;background:var(--bg-soft);border:1px solid var(--line);border-left:4px solid var(--accent);
+    border-radius:6px;padding:16px 18px;
+  }
+  .party .role{font-size:8.5pt;letter-spacing:2px;text-transform:uppercase;color:var(--muted);}
+  .party .who{font-size:13pt;font-weight:700;margin-top:4px;}
+  .party .det{font-size:9pt;color:var(--muted);margin-top:6px;line-height:1.5;}
+
+  .cover-foot{
+    margin-top:auto;padding-top:24px;border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;align-items:flex-end;font-size:9pt;color:var(--muted);
+  }
+  .cover-foot .tpl{text-align:right;}
+  .cover-foot .tpl b{color:var(--accent);}
+
+  .rhead{
+    display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);
+    padding-bottom:8px;margin-bottom:18px;font-size:8.5pt;color:var(--muted);letter-spacing:1px;text-transform:uppercase;
+  }
+  .rhead b{color:var(--ink);}
+
+  table{border-collapse:collapse;width:100%;margin:10px 0 6px 0;font-size:10pt;}
+  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+  thead th{background:var(--accent);color:#fff;font-size:9pt;letter-spacing:.5px;text-transform:uppercase;border-bottom:none;}
+  tbody tr:nth-child(even){background:var(--bg-soft);}
+  td.num,th.num{text-align:right;white-space:nowrap;}
+  tfoot td{font-weight:700;background:#f4e7e7;border-top:2px solid var(--accent);}
+
+  .callout{
+    background:var(--bg-soft);border:1px solid var(--line);border-left:4px solid var(--gold);
+    border-radius:6px;padding:12px 16px;margin:12px 0;font-size:10pt;
+  }
+  .grid2{display:flex;gap:18px;}
+  .grid2>div{flex:1;}
+
+  .kpi{display:flex;gap:12px;flex-wrap:wrap;margin:10px 0;}
+  .kpi .cell{flex:1;min-width:150px;background:var(--bg-soft);border:1px solid var(--line);border-radius:6px;padding:12px 14px;}
+  .kpi .cell .v{font-size:16pt;font-weight:800;color:var(--accent);}
+  .kpi .cell .l{font-size:8.5pt;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:2px;}
+
+  .sign{display:flex;gap:40px;margin-top:36px;}
+  .sign .block{flex:1;}
+  .sign .line{border-bottom:1.5px solid var(--ink);height:40px;margin-bottom:6px;}
+  .sign .lbl{font-size:9pt;color:var(--muted);}
+
+  .tag{display:inline-block;background:var(--accent);color:#fff;font-size:8pt;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 8px;border-radius:10px;}
+  .footer-note{font-size:8pt;color:var(--muted);text-align:center;margin-top:28px;border-top:1px solid var(--line);padding-top:10px;}
+</style>
+</head>
+<body>
+
+<!-- ============== COVER ============== -->
+<section class="page cover">
+  <div class="cover-top">
+    <div class="brandmark">
+      <svg class="logo" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="1" y="1" width="48" height="48" rx="10" fill="#161a1d"/>
+        <path d="M11 30 l4 -9 a4 4 0 0 1 3.6 -2.4 h12.8 a4 4 0 0 1 3.6 2.4 l4 9"
+              fill="none" stroke="#b11116" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="9" y="30" width="32" height="8" rx="3" fill="#b11116"/>
+        <circle cx="16" cy="39" r="3.2" fill="#fff"/>
+        <circle cx="34" cy="39" r="3.2" fill="#fff"/>
+      </svg>
+      <div>
+        <div class="name">CMH WETLAND</div>
+        <div class="sub">Chery Dealership &middot; Fleet Division</div>
+      </div>
+    </div>
+    <div class="ref-box">
+      <div><b>Proposal No.</b> <span class="ph">CMH-FLT-2026-0147</span></div>
+      <div><b>Date</b> 2&nbsp;October&nbsp;2026</div>
+      <div><b>Valid until</b> <span class="ph">31&nbsp;October&nbsp;2026</span></div>
+    </div>
+  </div>
+
+  <div class="cover-hero">
+    <div class="kicker">Confidential Fleet Proposal</div>
+    <h1>Fleet Supply Proposal</h1>
+    <div class="model">Chery Tiggo Cross CVT &mdash; LiT</div>
+    <div class="rule"></div>
+    <div class="tagline">A turnkey fleet solution for BCI Security Company &mdash; the right vehicle, one price per unit, a single fleet account, and aftersales that keeps the fleet on the road.</div>
+  </div>
+
+  <div class="parties">
+    <div class="party">
+      <div class="role">Prepared for &mdash; Client</div>
+      <div class="who">BCI Security Company</div>
+      <div class="det">
+        Attention: <span class="ph">[Fleet / Operations Manager]</span><br>
+        <span class="ph">[Company address]</span><br>
+        <span class="ph">[City, Postal code], South Africa</span>
+      </div>
+    </div>
+    <div class="party">
+      <div class="role">Prepared by &mdash; Dealership</div>
+      <div class="who">CMH Wetland</div>
+      <div class="det">
+        Fleet Sales: <span class="ph">[Fleet Executive name]</span><br>
+        <span class="ph">[Dealership address]</span><br>
+        <span class="ph">[phone]</span> &middot; <span class="ph">[email]</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="cover-foot">
+    <div>
+      CMH Wetland &middot; Authorised Chery Dealer<br>
+      <span class="ph">[Dealer code]</span> &middot; <span class="ph">[VAT no.]</span>
+    </div>
+    <div class="tpl">
+      Prepared with the <b>Maritico</b> proposal template<br>
+      maritico.co.za
+    </div>
+  </div>
+</section>
+
+<!-- ============== COVER LETTER ============== -->
+<section class="page">
+  <div class="rhead"><span>CMH Wetland &mdash; Fleet Proposal for <b>BCI Security Company</b></span><span>Confidential</span></div>
+
+  <h2 class="section">Letter of Introduction</h2>
+  <p class="muted small">2 October 2026</p>
+
+  <p>
+    <b>Attention:</b> <span class="ph">[Name, Title]</span><br>
+    <b>BCI Security Company</b><br>
+    <span class="ph">[Address]</span>
+  </p>
+
+  <p class="lead">Dear <span class="ph">[Mr/Ms Surname]</span>,</p>
+
+  <p><b>Re: Supply of Chery Tiggo Cross CVT (LiT) vehicles for the BCI Security fleet</b></p>
+
+  <p>
+    Thank you for the opportunity to quote CMH Wetland for BCI Security Company's fleet requirement. A security
+    operation lives or dies on reliability &mdash; vehicles that start every morning, cover long daily distances
+    on patrol and response work, are cheap to run, and are quick and affordable to put back on the road when
+    they need a service.
+  </p>
+  <p>
+    The Chery Tiggo Cross CVT in LiT specification is, in our view, an unusually strong fit for that brief: a
+    modern, well-equipped compact SUV with the ground clearance and presence that suits a security brand, a
+    frugal turbocharged drivetrain, and one of the strongest warranty and service-plan packages in its class.
+    Bought as a fleet, it also carries a per-unit price that is difficult to match on a comparable vehicle.
+  </p>
+  <p>
+    This proposal sets out the recommended vehicle, the fleet pricing and volume terms, finance and ownership
+    options, the warranty and aftersales cover, and a delivery plan that gets your vehicles on the road quickly.
+    Every price and hard specification figure is clearly marked for final confirmation against current Chery
+    pricing and the signed fleet agreement &mdash; we would rather confirm the exact figure than quote one that
+    turns out to be wrong.
+  </p>
+  <p>
+    We would welcome a meeting to finalise specification, colours and livery, and to arrange a demonstration
+    unit for your team to evaluate.
+  </p>
+
+  <p style="margin-top:22px;">Yours faithfully,</p>
+  <p style="margin-top:26px;">
+    <b><span class="ph">[Fleet Executive Name]</span></b><br>
+    <span class="muted">Fleet Sales &middot; CMH Wetland (Chery)</span><br>
+    <span class="muted small"><span class="ph">[phone]</span> &middot; <span class="ph">[email]</span></span>
+  </p>
+</section>
+
+<!-- ============== ABOUT + UNDERSTANDING ============== -->
+<section class="page">
+  <div class="rhead"><span>CMH Wetland &mdash; Fleet Proposal for <b>BCI Security Company</b></span><span>Confidential</span></div>
+
+  <h2 class="section">1. About CMH Wetland</h2>
+  <p>
+    CMH Wetland is an authorised Chery dealership with a dedicated fleet division. We supply, finance and
+    maintain vehicles for commercial operators, with a single fleet account manager and a workshop geared to
+    keep working vehicles moving. For an operation like BCI, our value is not just the vehicle price &mdash; it
+    is keeping the fleet available.
+  </p>
+  <div class="kpi">
+    <div class="cell"><div class="v">1</div><div class="l">Fleet account manager</div></div>
+    <div class="cell"><div class="v"><span class="ph">[00]</span></div><div class="l">Vehicles in this proposal</div></div>
+    <div class="cell"><div class="v">Chery</div><div class="l">Authorised dealer</div></div>
+    <div class="cell"><div class="v"><span class="ph">[00]</span> days</div><div class="l">Target delivery</div></div>
+  </div>
+
+  <h2 class="section" style="margin-top:22px;">2. Understanding BCI's Fleet Requirement</h2>
+  <p>Based on our discussions, the fleet is intended for security operations, which drives the recommendation:</p>
+  <div class="grid2">
+    <div>
+      <h3>What the vehicle must do</h3>
+      <ul>
+        <li>High daily mileage on patrol and response routes</li>
+        <li>Reliable cold starts and all-day duty cycles</li>
+        <li>Low fuel and running cost per kilometre</li>
+        <li>Carry officers plus equipment comfortably</li>
+      </ul>
+    </div>
+    <div>
+      <h3>What matters commercially</h3>
+      <ul>
+        <li>Competitive per-unit price across the fleet</li>
+        <li>Predictable maintenance via a service plan</li>
+        <li>Strong warranty to limit downtime risk</li>
+        <li>Good residual value at fleet replacement</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout">
+    <b>Assumed quantity:</b> <span class="ph">[00]</span> units of the Chery Tiggo Cross CVT (LiT).
+    Final quantity, colours and any livery requirements to be confirmed before order.
+  </div>
+</section>
+
+<!-- ============== THE VEHICLE ============== -->
+<section class="page">
+  <div class="rhead"><span>CMH Wetland &mdash; Fleet Proposal for <b>BCI Security Company</b></span><span>Confidential</span></div>
+
+  <h2 class="section">3. Recommended Vehicle &mdash; Chery Tiggo Cross CVT (LiT)</h2>
+  <p>
+    The Tiggo Cross is Chery's compact SUV, and the CVT LiT derivative pairs an efficient turbocharged petrol
+    engine with a smooth automatic transmission and a well-specified cabin &mdash; a practical, low-fatigue
+    vehicle for officers who spend their shift behind the wheel.
+  </p>
+
+  <h3>Why it suits a security fleet</h3>
+  <ul>
+    <li><b>Presence.</b> SUV stance and ground clearance project authority and handle rough access roads and kerbs.</li>
+    <li><b>Running cost.</b> Turbo-petrol efficiency and an auto gearbox reduce fuel burn and driver fatigue on long shifts.</li>
+    <li><b>Comfort &amp; safety.</b> Modern cabin, infotainment and driver-assist features keep officers alert and connected.</li>
+    <li><b>Ownership peace of mind.</b> Class-leading warranty and an available service plan cap downside risk across the fleet.</li>
+  </ul>
+
+  <h3>Key specifications <span class="tag">Confirm</span></h3>
+  <table>
+    <tbody>
+      <tr><td>Model</td><td>Chery Tiggo Cross CVT &mdash; LiT</td></tr>
+      <tr><td>Engine</td><td><span class="ph">[1.5T turbo-petrol]</span></td></tr>
+      <tr><td>Power / torque</td><td><span class="ph">[kW] / [Nm]</span></td></tr>
+      <tr><td>Transmission</td><td>CVT automatic</td></tr>
+      <tr><td>Fuel consumption (claimed)</td><td><span class="ph">[0.0] L/100km</span></td></tr>
+      <tr><td>Fuel tank</td><td><span class="ph">[00] L</span></td></tr>
+      <tr><td>Seating</td><td>5</td></tr>
+      <tr><td>Warranty</td><td><span class="ph">[5-year / 150 000 km]</span> &mdash; confirm current Chery terms</td></tr>
+      <tr><td>Service plan</td><td><span class="ph">[included / optional]</span></td></tr>
+      <tr><td>Available colours</td><td><span class="ph">[list — confirm fleet colours]</span></td></tr>
+    </tbody>
+  </table>
+  <p class="small muted">
+    All specification figures are placeholders to be confirmed against current Chery South Africa data and the
+    exact LiT build at order. We will supply the signed-off spec sheet with the final quote.
+  </p>
+</section>
+
+<!-- ============== COMMERCIALS ============== -->
+<section class="page">
+  <div class="rhead"><span>CMH Wetland &mdash; Fleet Proposal for <b>BCI Security Company</b></span><span>Confidential</span></div>
+
+  <h2 class="section">4. Fleet Pricing</h2>
+  <p class="small muted">
+    All prices are placeholders pending the signed fleet agreement and current Chery pricing. Prices are
+    indicated excluding VAT unless stated; on-the-road costs (licensing, registration, delivery) are shown
+    separately. Fleet discount applies to the assumed quantity and will be re-confirmed for the final order.
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Item</th><th class="num">Per unit</th><th class="num">Qty</th><th class="num">Total</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Chery Tiggo Cross CVT (LiT) &mdash; retail</td><td class="num">R <span class="ph">[000 000]</span></td><td class="num"><span class="ph">[00]</span></td><td class="num">R <span class="ph">[0 000 000]</span></td></tr>
+      <tr><td>Less: fleet discount <span class="ph">[00]</span>%</td><td class="num">&minus;R <span class="ph">[00 000]</span></td><td class="num"><span class="ph">[00]</span></td><td class="num">&minus;R <span class="ph">[000 000]</span></td></tr>
+      <tr><td>On-the-road (per unit): licensing, registration, delivery</td><td class="num">R <span class="ph">[0 000]</span></td><td class="num"><span class="ph">[00]</span></td><td class="num">R <span class="ph">[00 000]</span></td></tr>
+      <tr><td>Optional: fleet livery / branding</td><td class="num">R <span class="ph">[0 000]</span></td><td class="num"><span class="ph">[00]</span></td><td class="num">R <span class="ph">[00 000]</span></td></tr>
+      <tr><td>Optional: vehicle tracking unit + subscription</td><td class="num">R <span class="ph">[0 000]</span></td><td class="num"><span class="ph">[00]</span></td><td class="num">R <span class="ph">[00 000]</span></td></tr>
+    </tbody>
+    <tfoot>
+      <tr><td colspan="3">Indicative fleet total (excl. VAT)</td><td class="num">R <span class="ph">[0 000 000]</span></td></tr>
+    </tfoot>
+  </table>
+
+  <div class="grid2" style="margin-top:14px;">
+    <div class="callout" style="margin:0;">
+      <b>Net price per vehicle</b><br>
+      After fleet discount: R <span class="ph">[000 000]</span> <span class="small muted">(excl. VAT)</span><br>
+      On the road: R <span class="ph">[000 000]</span>
+    </div>
+    <div class="callout" style="margin:0;">
+      <b>Volume terms</b><br>
+      Discount tier based on <span class="ph">[00]</span>+ units.<br>
+      <span class="small muted">Larger orders qualify for improved pricing &mdash; happy to re-quote.</span>
+    </div>
+  </div>
+
+  <h2 class="section" style="margin-top:22px;">5. Finance &amp; Ownership Options</h2>
+  <table>
+    <thead><tr><th>Option</th><th>Summary</th><th class="num">Indicative monthly / unit</th></tr></thead>
+    <tbody>
+      <tr><td>Cash / outright purchase</td><td>Full ownership, no finance cost</td><td class="num">&mdash;</td></tr>
+      <tr><td>Instalment sale (fleet)</td><td><span class="ph">[60]</span> months, <span class="ph">[00]</span>% deposit, linked rate</td><td class="num">R <span class="ph">[0 000]</span></td></tr>
+      <tr><td>Operating lease / full maintenance</td><td>Fixed monthly, maintenance &amp; tyres included</td><td class="num">R <span class="ph">[0 000]</span></td></tr>
+    </tbody>
+  </table>
+  <p class="small muted">Monthly figures are placeholders. Finance is subject to credit approval and the rate prevailing at signature.</p>
+</section>
+
+<!-- ============== AFTERSALES + DELIVERY ============== -->
+<section class="page">
+  <div class="rhead"><span>CMH Wetland &mdash; Fleet Proposal for <b>BCI Security Company</b></span><span>Confidential</span></div>
+
+  <h2 class="section">6. Warranty, Service &amp; Aftersales</h2>
+  <div class="grid2">
+    <div>
+      <ul>
+        <li>Manufacturer warranty: <span class="ph">[5-year / 150 000 km]</span> &mdash; confirm.</li>
+        <li>Service plan: <span class="ph">[included / term]</span>, fixed service pricing.</li>
+        <li>Roadside assistance: <span class="ph">[term]</span>.</li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li>Priority fleet servicing &amp; booking at CMH Wetland.</li>
+        <li>Fleet-rate parts and labour where applicable.</li>
+        <li>Single account manager for all bookings and queries.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout">
+    <b>Uptime matters most for a security fleet.</b> We will agree service scheduling that staggers the fleet so
+    you are never short of vehicles, and we hold common service parts to avoid delays.
+  </div>
+
+  <h2 class="section" style="margin-top:22px;">7. Delivery &amp; Rollout Plan</h2>
+  <table>
+    <thead><tr><th>Phase</th><th>Activity</th><th>Timing</th></tr></thead>
+    <tbody>
+      <tr><td>1 &mdash; Order</td><td>Final spec, colours, livery &amp; finance confirmed; order placed</td><td>Day 0</td></tr>
+      <tr><td>2 &mdash; Prep</td><td>Pre-delivery inspection, tracking &amp; livery fitment</td><td>Days <span class="ph">[1&ndash;10]</span></td></tr>
+      <tr><td>3 &mdash; Handover</td><td>Batch delivery, licensing &amp; registration, driver walkthrough</td><td>Days <span class="ph">[10&ndash;21]</span></td></tr>
+      <tr><td>4 &mdash; Review</td><td>Fleet account set-up confirmed; first service scheduled</td><td>Day <span class="ph">[30]</span></td></tr>
+    </tbody>
+  </table>
+  <p class="small muted">Timing depends on stock availability at order; current lead time will be confirmed with the final quote.</p>
+</section>
+
+<!-- ============== WHY + ACCEPTANCE ============== -->
+<section class="page">
+  <div class="rhead"><span>CMH Wetland &mdash; Fleet Proposal for <b>BCI Security Company</b></span><span>Confidential</span></div>
+
+  <h2 class="section">8. Why Buy Your Fleet from CMH Wetland</h2>
+  <ul>
+    <li><b>Right vehicle for the job.</b> The Tiggo Cross CVT LiT balances presence, comfort, economy and price for security work.</li>
+    <li><b>One fleet account.</b> A single manager for pricing, orders, deliveries, servicing and queries.</li>
+    <li><b>Uptime focus.</b> Staggered servicing and parts availability built around keeping your fleet on the road.</li>
+    <li><b>Transparent pricing.</b> Every figure confirmed in writing before you sign &mdash; no surprises.</li>
+    <li><b>Flexible ownership.</b> Cash, instalment or full-maintenance lease to match your cash-flow.</li>
+  </ul>
+
+  <h2 class="section" style="margin-top:20px;">9. Acceptance</h2>
+  <p>
+    This proposal is valid until <span class="ph">[31 October 2026]</span>. Acceptance below authorises CMH
+    Wetland to prepare a final fleet quotation and order documentation at the confirmed specification and
+    pricing. This document is not a binding contract until a fleet sale/lease agreement is signed by both parties.
+  </p>
+
+  <div class="sign">
+    <div class="block">
+      <div class="line"></div>
+      <div class="lbl">For and on behalf of <b>BCI Security Company</b></div>
+      <div class="lbl" style="margin-top:14px;">Name: <span class="ph">[________________]</span></div>
+      <div class="lbl">Designation: <span class="ph">[________________]</span></div>
+      <div class="lbl">Date: <span class="ph">[____________]</span></div>
+    </div>
+    <div class="block">
+      <div class="line"></div>
+      <div class="lbl">For and on behalf of <b>CMH Wetland</b></div>
+      <div class="lbl" style="margin-top:14px;">Name: <span class="ph">[________________]</span></div>
+      <div class="lbl">Designation: <span class="ph">[________________]</span></div>
+      <div class="lbl">Date: <span class="ph">[____________]</span></div>
+    </div>
+  </div>
+
+  <div style="margin-top:30px;" class="callout">
+    <b>Contact &mdash; CMH Wetland Fleet Division</b><br>
+    <span class="ph">[Fleet Executive]</span><br>
+    <span class="ph">[phone]</span> &middot; <span class="ph">[email]</span> &middot; <span class="ph">[website]</span>
+  </div>
+
+  <div class="footer-note">
+    Confidential &mdash; prepared for BCI Security Company. Pricing and specifications are indicative and subject
+    to confirmation, stock availability and credit approval; E&amp;OE.<br>
+    Prepared using the <b>Maritico</b> proposal template &middot; maritico.co.za
+  </div>
+</section>
+
+</body>
+</html>
