@@ -16,52 +16,48 @@
   *{ box-sizing:border-box; margin:0; padding:0; }
   body{ font-family:'InterV',-apple-system,'Helvetica Neue',Arial,sans-serif; color:var(--ink); background:#D8D2C6; -webkit-font-smoothing:antialiased; }
   .serif{ font-family:'Playfair Display',Georgia,serif; }
-  .sheet{ width:210mm; min-height:297mm; background:var(--paper); margin:0 auto; position:relative; overflow:hidden; padding:20mm 22mm; display:flex; flex-direction:column; }
+  .sheet{ width:210mm; min-height:297mm; background:var(--paper); margin:0 auto; position:relative; overflow:hidden; padding:18mm 22mm; display:flex; flex-direction:column; }
 
   img.chery{ mix-blend-mode:multiply; display:block; }
   .bci-chip{ background:var(--dark); border-radius:5px; display:inline-flex; align-items:center; justify-content:center; padding:8px 11px; }
   .bci-chip img{ display:block; height:26px; }
   .ph{ color:var(--gold); font-style:italic; border-bottom:1px dotted var(--gold-light); padding:0 1px; white-space:nowrap; }
 
-  .mast{ display:flex; justify-content:space-between; align-items:center; padding-bottom:16px; border-bottom:1px solid var(--line); position:relative; }
+  .mast{ display:flex; justify-content:space-between; align-items:center; padding-bottom:14px; border-bottom:1px solid var(--line); position:relative; }
   .mast::after{ content:''; position:absolute; bottom:-1px; right:0; width:150px; height:1px; background:var(--gold); }
   .mast .l{ display:flex; align-items:center; gap:14px; }
-  .mast .l img.chery{ height:38px; }
+  .mast .l img.chery{ height:36px; }
   .mast .x{ font-family:'Playfair Display',serif; color:var(--gold); font-size:13px; }
-  .mast .r{ text-align:right; font-size:8.5px; letter-spacing:2px; text-transform:uppercase; color:var(--muted); font-weight:600; line-height:1.8; }
+  .mast .r{ text-align:right; font-size:8px; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted); font-weight:600; line-height:1.9; }
 
-  .meta{ display:flex; justify-content:space-between; margin-top:26px; }
+  .meta{ display:flex; justify-content:space-between; margin-top:22px; }
   .meta .b .lbl{ font-size:8.5px; letter-spacing:2.5px; text-transform:uppercase; color:var(--muted); font-weight:600; margin-bottom:5px; }
   .meta .b .val{ font-size:12px; color:var(--ink); }
   .meta .b.r{ text-align:right; }
 
-  .to{ margin-top:22px; }
+  .to{ margin-top:20px; }
   .to .lbl{ font-size:8.5px; letter-spacing:2.5px; text-transform:uppercase; color:var(--muted); font-weight:600; margin-bottom:6px; }
   .to .nm{ font-size:13px; font-weight:700; color:var(--ink); }
-  .to .ln{ font-size:11.5px; color:var(--ink-soft); line-height:1.6; }
+  .to .ln{ font-size:11px; color:var(--ink-soft); line-height:1.65; }
 
-  .subject{ margin-top:24px; font-family:'Playfair Display',serif; font-size:17px; color:var(--ink); line-height:1.3; padding-bottom:14px; border-bottom:1px solid var(--line); }
+  .subject{ margin-top:20px; font-family:'Playfair Display',serif; font-size:16px; color:var(--ink); line-height:1.3; padding-bottom:13px; border-bottom:1px solid var(--line); }
   .subject .em{ font-style:italic; color:var(--gold); }
 
-  .sal{ margin-top:22px; font-size:13px; }
-  .bodytext{ margin-top:6px; }
-  .bodytext p{ font-size:12.5px; line-height:1.85; color:var(--ink-soft); margin-top:14px; }
+  .sal{ margin-top:20px; font-size:13px; }
+  .bodytext p{ font-size:12px; line-height:1.72; color:var(--ink-soft); margin-top:12px; }
   .bodytext p strong{ color:var(--ink); font-weight:600; }
 
-  .sign{ margin-top:30px; }
+  .sign{ margin-top:26px; }
   .sign .close{ font-family:'Playfair Display',serif; font-style:italic; font-size:14px; color:var(--ink); }
-  .sign .nm{ font-family:'Playfair Display',serif; font-size:22px; color:var(--ink); margin-top:30px; }
-  .sign .role{ font-size:10px; letter-spacing:1px; text-transform:uppercase; color:var(--gold); font-weight:600; margin-top:6px; }
-  .sign .contact{ font-size:10.5px; color:var(--ink-soft); margin-top:5px; }
+  .sign .nm{ font-family:'Playfair Display',serif; font-size:21px; color:var(--ink); margin-top:26px; }
+  .sign .title{ font-size:9px; letter-spacing:1px; text-transform:uppercase; color:var(--gold); font-weight:600; margin-top:7px; }
+  .sign .contact{ font-size:10.5px; color:var(--ink-soft); margin-top:4px; }
 
-  .foot{ margin-top:auto; padding-top:16px; border-top:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; font-size:9px; letter-spacing:1px; text-transform:uppercase; color:var(--muted); }
+  .foot{ margin-top:auto; padding-top:14px; border-top:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; font-size:8.5px; letter-spacing:1px; text-transform:uppercase; color:var(--muted); }
   .foot .bci-chip img{ height:18px; }
 
   @page{ size:A4 portrait; margin:0; }
-  @media print{
-    body{ background:white; }
-    .sheet{ margin:0; min-height:auto; box-shadow:none; }
-  }
+  @media print{ body{ background:white; } .sheet{ margin:0; min-height:auto; box-shadow:none; } }
 </style>
 </head>
 <body>
@@ -73,60 +69,62 @@
       <span class="x serif">&times;</span>
       <img class="chery" src="assets/chery_westrand.png" alt="Chery Westrand">
     </div>
-    <div class="r">Fleet Mobility Proposal<br>Private &amp; Confidential</div>
+    <div class="r">Fleet Mobility Proposal<br>Confidential · For BCI Security management review</div>
   </div>
 
   <div class="meta">
-    <div class="b">
-      <div class="lbl">Date</div>
-      <div class="val">2 October 2026</div>
-    </div>
-    <div class="b r">
-      <div class="lbl">Reference</div>
-      <div class="val">BCI Security &times; CMH Westrand</div>
-    </div>
+    <div class="b"><div class="lbl">Date</div><div class="val">2 October 2026</div></div>
+    <div class="b r"><div class="lbl">Reference</div><div class="val">BCI Security &times; CMH Westrand</div></div>
   </div>
 
   <div class="to">
     <div class="lbl">To</div>
     <div class="nm">BCI Security</div>
-    <div class="ln"><span class="ph">[Fleet / Operations Manager]</span></div>
-    <div class="ln"><span class="ph">[Street address]</span></div>
-    <div class="ln"><span class="ph">[City, Postcode]</span></div>
+    <div class="ln">Jaco, Operations Manager · Opsmanager@bci.co.za</div>
+    <div class="ln">Johnny · Johnny@bcisecurity.co.za</div>
+    <div class="ln">and the BCI Security team</div>
   </div>
 
   <div class="subject">Re: A Chery Tiggo Cross fleet for BCI Security <span class="em">from business relationship to fleet partnership.</span></div>
 
-  <div class="sal">Dear <span class="ph">[Name]</span>,</div>
+  <div class="sal">Dear Jaco, Johnny and the BCI team,</div>
 
   <div class="bodytext">
     <p>
-      BCI Security and CMH Westrand already do business together, and it has been a relationship worth having. I
-      am writing to propose taking it a step further: a dedicated vehicle fleet, built around your operation and
-      carried by one dealer team that knows it well.
+      BCI Security and CMH Westrand already have an established business relationship. I am writing to explore how
+      we can take that relationship a step further through a dedicated vehicle fleet solution, supported by one
+      dealer team from vehicle selection and delivery through to ongoing servicing requirements, and built around
+      BCI's operational requirements.
     </p>
     <p>
-      The enclosed proposal sets out <strong>fifteen Chery Tiggo Cross, delivered in full BCI livery</strong> and
-      ready for duty on handover. It is a vehicle chosen for the unglamorous things a security fleet lives on:
-      reliability on high mileage, low running cost, the presence your brand deserves on site, and a warranty
-      that protects you for years rather than months.
+      The enclosed proposal outlines a potential fleet of <strong>15 Chery Tiggo Cross vehicles</strong>,
+      configured for BCI Security and presented in BCI livery. The final vehicle specification, livery, equipment
+      and delivery programme would be confirmed with BCI before order.
     </p>
     <p>
-      You will notice there are no prices in this version, and that is deliberate. I would rather we first agree
-      that this is the right vehicle and the right partnership, then put firm, transparent figures to whichever
-      ownership route suits BCI best. Nothing is fixed until you are happy with it.
+      The Tiggo Cross offers the combination of automatic transmission, SUV practicality, fuel efficiency, safety
+      and long-term warranty coverage that can make it suitable for day-to-day fleet operations. The BCI livery
+      also gives the fleet a consistent and professional presence across your operational footprint.
     </p>
     <p>
-      The next step is simple. Let me bring a demonstration unit to your team and walk through how the fleet fits
-      your operation and where BCI is headed. There is no obligation. Name a day and I will be there.
+      This initial proposal does not include pricing deliberately. Before preparing a formal quotation, I would
+      prefer to understand BCI's preferred ownership structure, operational requirements and fleet priorities.
+      Once those requirements are confirmed, we can prepare transparent figures around the preferred ownership
+      route. Nothing is committed until the final specification and commercial terms have been agreed.
+    </p>
+    <p>
+      The next step is simple: let me bring a demonstration unit to your team and discuss how the Tiggo Cross
+      could fit BCI's current fleet requirements. From there, we can work through vehicle specification, livery,
+      ownership structure and commercial options. There is no obligation at this stage. If the concept makes
+      sense for BCI, we can then move towards a formal fleet quotation.
     </p>
   </div>
 
   <div class="sign">
     <div class="close serif">Warm regards,</div>
     <div class="nm serif">Innocent Mariti</div>
-    <div class="role">Fleet Sales · CMH Westrand</div>
-    <div class="contact">073 567 2508 · <span class="ph">[email]</span></div>
+    <div class="title">Chery Vehicle Lifestyle Advisor · Fleet Sales · CMH Westrand</div>
+    <div class="contact">073 567 2508 · nse9420@cmh.co.za</div>
   </div>
 
   <div class="foot">
