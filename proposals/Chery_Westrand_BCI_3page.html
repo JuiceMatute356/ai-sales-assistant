@@ -100,6 +100,10 @@
   .own .o{ padding:10px 0; border-bottom:1px solid var(--line); }
   .own .o .nm{ font-family:'Playfair Display',serif; font-size:14px; color:var(--ink); margin-bottom:2px; }
   .own .o .ds{ font-size:10px; line-height:1.45; color:var(--muted); }
+  .own3{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:16px; }
+  .own3 .o{ border:1px solid var(--line); border-radius:8px; background:var(--card); padding:16px 18px; }
+  .own3 .o .nm{ font-family:'Playfair Display',serif; font-size:15px; color:var(--ink); margin-bottom:6px; }
+  .own3 .o .ds{ font-size:10.5px; line-height:1.55; color:var(--ink-soft); }
 
   .commit{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:16px; }
   .commit .c .n{ font-family:'Playfair Display',serif; font-size:16px; color:var(--gold); }
@@ -156,9 +160,9 @@
 
   <div class="offer">
     <div class="cell"><div class="v">15</div><div class="l">Vehicles</div></div>
-    <div class="cell"><div class="v g">8%</div><div class="l">Fleet discount</div></div>
-    <div class="cell"><div class="v"><span class="sm">R</span> 285 108</div><div class="l">Net per vehicle</div></div>
-    <div class="cell"><div class="v"><span class="sm">R</span> 4 276 620</div><div class="l">Net fleet total</div></div>
+    <div class="cell"><div class="v g">BCI</div><div class="l">Full livery</div></div>
+    <div class="cell"><div class="v">7.3<span class="sm"> L</span></div><div class="l">Per 100 km</div></div>
+    <div class="cell"><div class="v">5yr<span class="sm"> / 150k</span></div><div class="l">Warranty</div></div>
   </div>
 
   <div class="p1-foot">
@@ -239,29 +243,15 @@
     <div class="rh-rule"></div>
   </div>
 
-  <div class="kicker">The fleet, priced plainly</div>
+  <div class="kicker">Ownership, your way</div>
   <div class="kicker-rule"></div>
-  <h2 class="head">Fifteen vehicles, one clear number.</h2>
+  <h2 class="head">Three ways onto the road.</h2>
+  <p class="lead" style="margin-top:10px; max-width:152mm; font-size:12px;">The fleet can be structured around your cash flow and how BCI prefers to hold its assets. We will put firm figures to whichever route suits you the moment you want them.</p>
 
-  <div class="price-wrap">
-    <div>
-      <div class="pr-h">What you pay</div>
-      <div class="pr-row"><span class="k">Chery Tiggo Cross 1.5 LiT CVT, per unit (incl VAT)</span><span class="v">R 309 900</span></div>
-      <div class="pr-row"><span class="k">Fleet discount</span><span class="v g">8%</span></div>
-      <div class="pr-row"><span class="k">Net price per vehicle</span><span class="v">R 285 108</span></div>
-      <div class="pr-row total"><span class="k">Fleet of fifteen, net</span><span class="v">R 4 276 620</span></div>
-      <p style="font-size:9px; color:var(--muted); margin-top:10px; line-height:1.55;">
-        Retail is the current Chery South Africa figure and includes VAT. On-the-road costs, BCI livery and tracking are quoted separately: OTR <span class="ph">[R 0 000]</span>/unit · livery <span class="ph">[R 0 000]</span> · tracking <span class="ph">[R 0 000]</span>.
-      </p>
-    </div>
-    <div>
-      <div class="pr-h">How you own it</div>
-      <div class="own">
-        <div class="o"><div class="nm">Cash</div><div class="ds">Settled once. Full ownership, no finance cost. R 285 108 per vehicle.</div></div>
-        <div class="o"><div class="nm">Instalment</div><div class="ds"><span class="ph">[60]</span>-month term, <span class="ph">[10]</span>% deposit, from <span class="ph">[R 0 000]</span>/vehicle monthly. Subject to credit approval.</div></div>
-        <div class="o"><div class="nm">Full-maintenance lease</div><div class="ds">Fixed monthly, maintenance and tyres included, from <span class="ph">[R 0 000]</span>/vehicle.</div></div>
-      </div>
-    </div>
+  <div class="own3">
+    <div class="o"><div class="nm">Cash purchase</div><div class="ds">Outright ownership from day one, no finance cost. The simplest route for assets you intend to keep for the long haul.</div></div>
+    <div class="o"><div class="nm">Instalment sale</div><div class="ds">Spread the fleet over a fixed term with a deposit, with ownership passing to BCI at the end. Subject to credit approval.</div></div>
+    <div class="o"><div class="nm">Full-maintenance lease</div><div class="ds">One fixed monthly figure with servicing, maintenance and tyres included. Easiest to budget, and it keeps the fleet fresh.</div></div>
   </div>
 
   <div class="kicker" style="margin-top:22px;">What CMH Westrand commits to</div>
@@ -270,13 +260,13 @@
     <div class="c"><div class="n serif">1</div><h4>One fleet account</h4><p>A single named manager for orders, servicing and every query.</p></div>
     <div class="c"><div class="n serif">2</div><h4>Uptime by design</h4><p>Servicing staggered across the fleet, common parts held.</p></div>
     <div class="c"><div class="n serif">3</div><h4>Delivered ready</h4><p>Wrapped, licensed and road-ready, roughly three weeks from order.</p></div>
-    <div class="c"><div class="n serif">4</div><h4>Priced in the open</h4><p>Every figure confirmed in writing. No on-delivery surprises.</p></div>
+    <div class="c"><div class="n serif">4</div><h4>Clear in writing</h4><p>Every detail confirmed in writing before you commit. No surprises at handover.</p></div>
   </div>
 
   <div class="next">
     <div class="l">
       <div class="nh">The next step</div>
-      <p>Let us bring a demonstration unit to your team and walk the numbers with whoever owns the fleet budget. No obligation. Name a day and we will be there. This offer is valid until <span class="ph">[31 October 2026]</span>.</p>
+      <p>Let us bring a demonstration unit to your team and talk through how the fleet fits your operation, your vehicles and where BCI is headed. No obligation. Name a day and we will be there, with firm figures ready whenever you are.</p>
       <div class="sig">Innocent Mariti</div>
       <div class="role">Fleet Sales, CMH Westrand · 073 567 2508 · <span class="ph">[email]</span></div>
     </div>
@@ -286,7 +276,7 @@
     </div>
   </div>
 
-  <div class="foot-note">Pricing and specifications indicative, subject to confirmation, stock and credit approval · E&amp;OE</div>
+  <div class="foot-note">Specifications indicative, subject to confirmation, stock and availability · Figures provided on request · E&amp;OE</div>
 </section>
 
 </body>
