@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "proposalTitle": "BCI Security Fleet Mobility Proposal",
+    "subtitle": "A tailored fleet solution by CMH Westrand",
+    "docTitle": "Fleet Proposal",
+    "reference": "CMHW-BCI-FLEET-001",
+    "dateMode": "dynamic",
+    "confidentiality": "Private & Confidential — prepared for BCI Security"
+  },
+  "client": {
+    "name": "BCI Security",
+    "attention": "Attention: Fleet Decision-Maker",
+    "addressLine1": "[Delivery / billing address — to be confirmed]"
+  },
+  "dealership": {
+    "name": "CMH Westrand",
+    "group": "Combined Motor Holdings (CMH) Group",
+    "tag": "Part of the CMH Group · Authorised Chery dealer"
+  },
+  "preparedBy": {
+    "name": "Innocent Mariti",
+    "title": "Chery Vehicle Lifestyle Advisor",
+    "company": "CMH Westrand",
+    "phone": "073 567 2508"
+  },
+  "subject": "Proposal: Chery Tiggo Cross fleet solution for BCI Security",
+  "opening": "Building on our existing business relationship, CMH Westrand would welcome the opportunity to support BCI Security's fleet requirements with a tailored Chery fleet solution. This proposal sets out how we would approach a fleet partnership, why the Chery Tiggo Cross may suit your operation, and a clear commercial framework to work from. It is a basis for discussion — the final package will be tailored to BCI's actual requirements, budget and replacement plans.",
+  "vehicle": {
+    "brand": "Chery",
+    "model": "Tiggo Cross",
+    "derivative": "To be confirmed",
+    "imageLivery": "tiggo-cross-bci-livery.jpg",
+    "imageWrapViews": "tiggo-cross-bci-wrap-views.jpg",
+    "imageCaption": "Illustrative BCI Security livery concept on the Chery Tiggo Cross. Branding layout, roof signalling and graphics are shown for illustration and are subject to final design approval.",
+    "wrapCaption": "Livery concept across body views. Dimension callouts shown are an illustrative wrap-layout guide, not vehicle specifications.",
+    "intro": "The Chery Tiggo Cross is a modern compact SUV positioned for everyday practicality, driver comfort and running-cost efficiency. The figures below are published for the current South African range. The final specification — and whether the vehicle is the right fit — must be confirmed against BCI's operating requirements.",
+    "verifiedSpecs": {
+      "note": "Published manufacturer figures for the current South African Chery Tiggo Cross range. Final figures to be confirmed against the specific derivative selected; “to be confirmed” items are derivative-specific.",
+      "rows": [
+        { "label": "Powertrain (1.5T derivatives)", "value": "1.5-litre turbo-petrol, 1 498 cc", "status": "verified" },
+        { "label": "Power / torque (1.5T)", "value": "108 kW / 210 Nm", "status": "verified" },
+        { "label": "Transmission (1.5T)", "value": "6-speed dual-clutch (DCT)", "status": "verified" },
+        { "label": "Powertrain (LiT derivatives)", "value": "1.5-litre petrol, 83 kW / 170 Nm, 5MT or CVT", "status": "verified" },
+        { "label": "Fuel consumption (claimed)", "value": "1.5T: 6.5 L/100 km · LiT: 7.0–7.3 L/100 km", "status": "verified" },
+        { "label": "Ground clearance", "value": "180 mm", "status": "verified" },
+        { "label": "Fuel tank", "value": "51 litres", "status": "verified" },
+        { "label": "Vehicle warranty", "value": "5-year / 150 000 km", "status": "verified" },
+        { "label": "Service plan", "value": "5-year / 60 000 km", "status": "verified" },
+        { "label": "Engine warranty (first owner)", "value": "10-year / 1 000 000 km", "status": "verified" },
+        { "label": "Luggage capacity", "value": "To be confirmed on selected derivative", "status": "tbc" },
+        { "label": "Airbags / driver assist (ADAS)", "value": "To be confirmed on selected derivative", "status": "tbc" },
+        { "label": "Infotainment / connectivity", "value": "Touchscreen with smartphone connectivity — to be confirmed on selected derivative", "status": "tbc" }
+      ]
+    },
+    "suitability": "The Tiggo Cross is proposed as a general-duty, everyday operational vehicle. It is not an armoured vehicle, a specialised patrol vehicle, or a vehicle for high-risk response, and should not be specified for those roles unless the relevant suitability has been independently confirmed. BCI's operating requirements must determine the final vehicle, derivative and any fitment."
+  },
+  "commercial": {
+    "status": "PRELIMINARY COMMERCIAL STRUCTURE",
+    "intro": "The structure below is a framework for discussion. Pricing, discount and finance figures are shown as “to be confirmed” until BCI's vehicle count and requirements are known and the relevant approvals are in place.",
+    "rows": [
+      { "label": "Vehicle", "value": "Chery Tiggo Cross", "kind": "confirmed" },
+      { "label": "Derivative", "value": "To be confirmed", "kind": "tbc" },
+      { "label": "Number of vehicles", "value": "To be confirmed", "kind": "tbc" },
+      { "label": "Recommended retail price (per vehicle)", "value": "From R359,900.00 (1.5T) — published RRP, confirmed on selected derivative", "kind": "reference" },
+      { "label": "Proposed fleet discount (per vehicle)", "value": "To be confirmed — subject to approval", "kind": "tbc" },
+      { "label": "Dealership branding contribution (per vehicle)", "value": "R6,500.00 — contributed by CMH Westrand", "kind": "included" },
+      { "label": "Final vehicle price (per vehicle)", "value": "To be confirmed", "kind": "tbc" },
+      { "label": "Optional accessories", "value": "To be confirmed — by quotation", "kind": "tbc" },
+      { "label": "On-the-road costs", "value": "To be confirmed", "kind": "tbc" },
+      { "label": "Deposit", "value": "To be confirmed", "kind": "tbc" },
+      { "label": "Finance term", "value": "To be confirmed", "kind": "tbc" },
+      { "label": "Interest rate", "value": "To be confirmed — subject to credit approval", "kind": "tbc" },
+      { "label": "Balloon payment", "value": "To be confirmed", "kind": "tbc" },
+      { "label": "Monthly instalment (illustrative)", "value": "To be confirmed", "kind": "tbc" },
+      { "label": "Service plan", "value": "5-year / 60 000 km (standard)", "kind": "confirmed" },
+      { "label": "Warranty", "value": "5-year / 150 000 km (standard)", "kind": "confirmed" },
+      { "label": "Estimated delivery", "value": "To be confirmed — subject to stock", "kind": "tbc" }
+    ],
+    "brandingNote": "CMH Westrand will contribute vehicle branding to the value of R6,500.00 per vehicle as part of this fleet proposal. This contribution is offered in good faith and is subject to final written agreement and branding design approval.",
+    "disclaimer": "All pricing, finance structures, incentives and vehicle availability are subject to confirmation and the relevant approvals. Any discount, accessory package, service arrangement or other concession is subject to approval until authorised in writing. Finance is subject to affordability assessment, credit approval and lender terms. This document is a proposal for discussion and does not constitute a binding offer or a finance agreement."
+  },
+  "support": [
+    { "t": "Dedicated contact", "d": "A direct point of contact for vehicle enquiries and coordination." },
+    { "t": "Fleet quotations", "d": "Structured quotations based on the required number of vehicles and specifications." },
+    { "t": "Finance assistance", "d": "Assistance exploring suitable finance structures, subject to affordability, credit approval and lender terms." },
+    { "t": "Service coordination", "d": "Assistance coordinating servicing and workshop bookings, subject to dealer capacity and agreed arrangements." },
+    { "t": "Accessories & branding", "d": "Optional accessories and vehicle branding, subject to quotation and approval." },
+    { "t": "Vehicle delivery", "d": "Delivery coordination, subject to stock availability and agreed timelines." },
+    { "t": "Future fleet planning", "d": "An opportunity to discuss phased purchases and future replacement requirements." }
+  ],
+  "supportNote": "These are proposed support capabilities, offered in good faith — not contractual guarantees. Priority workshop treatment, courtesy or replacement vehicles, guaranteed uptime, special service rates and dedicated fleet-management resources are not implied by this document. Each can be explored and, if agreed, confirmed in writing.",
+  "options": [
+    { "tag": "Option A", "name": "Initial Fleet Purchase", "for": "For BCI's immediate vehicle requirements.", "items": ["Agreed vehicle specification", "Quoted fleet pricing", "Purchase or approved finance", "Delivery coordination", "Optional accessories"] },
+    { "tag": "Option B", "name": "Phased Fleet Renewal", "for": "For BCI's planned replacement requirements.", "items": ["Agreed vehicle quantities", "Phased purchasing schedule", "Budget planning", "Vehicle availability checks", "Future quotation reviews"] },
+    { "tag": "Option C", "name": "Long-Term Fleet Partnership", "for": "For ongoing fleet requirements.", "items": ["Periodic fleet reviews", "Future vehicle quotations", "Maintenance coordination", "Replacement planning", "Additional support services"] }
+  ],
+  "optionsNote": "These are starting points for discussion. BCI has not selected any option, and this proposal makes no claim of guaranteed savings. The right structure, and any commercial benefit, will be established together once BCI's requirements are confirmed.",
+  "nextStepsIntro": "We would welcome the opportunity to understand BCI Security's fleet requirements and develop a commercial proposal aligned with your business. A short discussion would let us confirm your vehicle requirements, replacement plans, preferred acquisition structure and budget — after which CMH Westrand can prepare a detailed quotation for your consideration.",
+  "informationRequired": [
+    "Current fleet size",
+    "Number of vehicles required",
+    "Current vehicle makes and models",
+    "Expected replacement timeline",
+    "Intended vehicle use and operating environment",
+    "Preferred purchasing or finance structure",
+    "Target budget per vehicle"
+  ],
+  "about": "CMH Westrand is a dealership within the Combined Motor Holdings (CMH) Group and an authorised Chery dealer. Through CMH Westrand, BCI Security would have a single point of contact for new-vehicle supply, finance facilitation, servicing and aftersales support across its Chery fleet.",
+  "approvalsRequired": [
+    "Fleet discount per vehicle (quantity-dependent) — subject to approval",
+    "R6,500.00 per-vehicle branding contribution — subject to final written agreement",
+    "Finance structure, interest rate and instalment — subject to credit approval and lender terms",
+    "Optional accessory and branding packages — by quotation and approval",
+    "Delivery timelines — subject to stock availability"
+  ],
+  "footer": {
+    "strap": "Chery fleet solutions",
+    "line": "CMH Westrand · Part of the Combined Motor Holdings (CMH) Group · Authorised Chery dealer"
+  }
+}
