@@ -2,33 +2,25 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>CMH Wetland · Chery Fleet Proposal for BCI Security</title>
+<title>Chery Westrand · Fleet Proposal for BCI Security</title>
 <style>
   @font-face{ font-family:'Playfair Display'; src:url('fonts/Playfair.ttf') format('truetype'); font-weight:400 900; font-style:normal; font-display:swap; }
   @font-face{ font-family:'Playfair Display'; src:url('fonts/Playfair-Italic.ttf') format('truetype'); font-weight:400 900; font-style:italic; font-display:swap; }
   @font-face{ font-family:'InterV'; src:url('fonts/Inter.ttf') format('truetype'); font-weight:100 900; font-style:normal; font-display:swap; }
 
   :root{
-    --paper:#FAF7F0;
-    --card:#F1EADC;
-    --ink:#21201C;
-    --ink-soft:#4C473E;
-    --muted:#8C8375;
-    --gold:#9C7A2E;
-    --gold-light:#B9A066;
-    --line:#E4DDCE;
+    --paper:#FAF7F0; --card:#F1EADC;
+    --ink:#21201C; --ink-soft:#4C473E; --muted:#8C8375;
+    --gold:#9C7A2E; --gold-light:#B9A066; --line:#E4DDCE;
+    --dark:#1A1917; --dark-2:#24221F; --bci-red:#D71920;
   }
   *{ box-sizing:border-box; margin:0; padding:0; }
   body{ font-family:'InterV',-apple-system,'Helvetica Neue',Arial,sans-serif; color:var(--ink); background:#D8D2C6; -webkit-font-smoothing:antialiased; }
   .serif{ font-family:'Playfair Display',Georgia,serif; }
 
-  .sheet{
-    width:210mm; min-height:297mm; background:var(--paper); margin:0 auto 10px;
-    position:relative; overflow:hidden; padding:20mm 22mm;
-    display:flex; flex-direction:column;
-  }
+  .sheet{ width:210mm; min-height:297mm; background:var(--paper); margin:0 auto 10px; position:relative; overflow:hidden; padding:20mm 22mm; display:flex; flex-direction:column; }
+  .sheet.dark{ background:var(--dark); color:#EDEAE3; }
 
-  /* ---------- shared type ---------- */
   .kicker{ font-size:10px; letter-spacing:3.5px; text-transform:uppercase; color:var(--gold); font-weight:600; }
   .kicker-rule{ width:38px; height:1.5px; background:var(--gold); margin-top:10px; margin-bottom:18px; }
   h1.display{ font-size:40px; line-height:1.12; font-weight:600; color:var(--ink); letter-spacing:-0.2px; }
@@ -38,56 +30,55 @@
   .dot-gold{ color:var(--gold); }
   .ph{ color:var(--gold); font-style:italic; border-bottom:1px dotted var(--gold-light); padding:0 1px; }
 
-  /* ---------- monogram ---------- */
-  .mono{ width:64px; height:64px; border:1.4px solid var(--gold); border-radius:50%; display:flex; align-items:center; justify-content:center; }
-  .mono span{ font-family:'Playfair Display',serif; font-size:24px; font-weight:600; color:var(--ink); letter-spacing:0.5px; }
-  .mono.sm{ width:40px; height:40px; border-width:1.2px; }
-  .mono.sm span{ font-size:15px; }
+  /* logos */
+  img.chery{ mix-blend-mode:multiply; display:block; }
+  .bci-chip{ background:var(--dark); border-radius:6px; display:inline-flex; align-items:center; justify-content:center; padding:10px 14px; }
+  .bci-chip img{ display:block; }
 
-  /* ---------- badge ---------- */
+  /* badge */
   .badge{ display:inline-flex; align-items:center; gap:10px; }
   .badge .ring{ width:34px; height:34px; border:1.2px solid var(--gold); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-size:14px; color:var(--gold); }
   .badge .label{ font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--gold); font-weight:600; }
 
-  /* ================= COVER ================= */
+  /* ===== COVER ===== */
   .cover{ text-align:center; align-items:center; }
-  .confi{ display:flex; align-items:center; justify-content:center; gap:16px; width:100%; margin-bottom:auto; }
+  .confi{ display:flex; align-items:center; justify-content:center; gap:16px; width:100%; }
   .confi .r{ height:1px; width:70px; background:var(--gold); opacity:.7; }
   .confi .t{ font-size:9.5px; letter-spacing:3px; text-transform:uppercase; color:var(--muted); font-weight:500; }
-  .cover-core{ display:flex; flex-direction:column; align-items:center; }
-  .cover-brand{ font-family:'Playfair Display',serif; font-size:34px; font-weight:600; color:var(--ink); margin-top:18px; letter-spacing:0.3px; }
-  .cover-sub{ font-size:10px; letter-spacing:4px; text-transform:uppercase; color:var(--muted); margin-top:8px; font-weight:500; }
-  .cover-lockup{ display:flex; align-items:center; justify-content:center; gap:14px; margin-top:16px; font-family:'Playfair Display',serif; font-size:15px; color:var(--ink); }
-  .cover-lockup .r{ height:1px; width:34px; background:var(--gold); }
-  .cover-lockup .x{ color:var(--gold); font-size:12px; }
-  .cover-for{ font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--gold); font-weight:600; margin-top:56px; }
+  .cover-core{ display:flex; flex-direction:column; align-items:center; margin-top:auto; }
+  .cover-logo{ height:96px; margin-bottom:6px; }
+  .cover-sub{ font-size:10px; letter-spacing:4px; text-transform:uppercase; color:var(--muted); margin-top:10px; font-weight:500; }
+  .cover-lockup{ display:flex; align-items:center; justify-content:center; gap:16px; margin-top:20px; }
+  .cover-lockup .x{ color:var(--gold); font-size:13px; font-family:'Playfair Display',serif; }
+  .cover-lockup .bci-chip img{ height:30px; }
+  .cover-for{ font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--gold); font-weight:600; margin-top:52px; }
   .cover-head{ font-family:'Playfair Display',serif; font-size:46px; line-height:1.1; font-weight:600; color:var(--ink); margin-top:18px; letter-spacing:-0.3px; }
-  .cover-intro{ font-size:12.5px; line-height:1.85; color:var(--ink-soft); max-width:430px; margin:22px auto 0; }
-  .cover-badge{ margin-top:34px; }
-  .cover-foot{ margin-top:auto; width:100%; border-top:1px solid var(--line); padding-top:16px; display:flex; justify-content:space-between; text-align:left; }
-  .cover-foot .col{ font-size:9px; }
+  .cover-intro{ font-size:12.5px; line-height:1.85; color:var(--ink-soft); max-width:440px; margin:22px auto 0; }
+  .cover-badge{ margin-top:32px; margin-bottom:auto; }
+  .cover-foot{ width:100%; border-top:1px solid var(--line); padding-top:16px; display:flex; justify-content:space-between; align-items:flex-end; text-align:left; }
+  .cover-foot .col{ font-size:9px; flex:1; }
   .cover-foot .col.c{ text-align:center; } .cover-foot .col.r{ text-align:right; }
-  .cover-foot .lbl{ letter-spacing:2.5px; text-transform:uppercase; color:var(--muted); font-weight:600; margin-bottom:5px; }
-  .cover-foot .val{ font-family:'Playfair Display',serif; font-size:14px; color:var(--ink); }
+  .cover-foot .lbl{ letter-spacing:2.5px; text-transform:uppercase; color:var(--muted); font-weight:600; margin-bottom:6px; }
+  .cover-foot .val{ font-family:'Playfair Display',serif; font-size:13px; color:var(--ink); }
   .cover-foot .val small{ font-family:'InterV',sans-serif; display:block; font-size:9px; color:var(--muted); letter-spacing:.5px; margin-top:2px; }
+  .cover-foot .bci-chip img{ height:20px; }
 
-  /* ================= RUNNING HEADER ================= */
+  /* ===== RUNNING HEADER ===== */
   .rh{ margin-bottom:26px; }
   .rh-top{ display:flex; justify-content:space-between; font-size:8.5px; letter-spacing:2px; text-transform:uppercase; color:var(--muted); font-weight:500; }
   .rh-main{ display:flex; justify-content:space-between; align-items:center; margin-top:10px; }
-  .rh-brand{ display:flex; align-items:center; gap:12px; }
-  .rh-brand .nm{ font-family:'Playfair Display',serif; font-size:18px; color:var(--ink); font-weight:600; }
+  .rh-brand img{ height:30px; }
   .rh-right{ font-size:8.5px; letter-spacing:2px; text-transform:uppercase; color:var(--muted); font-weight:500; }
   .rh-right b{ color:var(--gold); }
   .rh-rule{ position:relative; height:1px; background:var(--line); margin-top:12px; }
   .rh-rule::after{ content:''; position:absolute; right:0; top:0; width:160px; height:1px; background:var(--gold); }
 
-  /* ================= PULL QUOTE ================= */
+  /* ===== PULL QUOTE ===== */
   .pull{ border-left:2px solid var(--gold); padding:4px 0 4px 22px; margin:6px 0 10px; }
   .pull p{ font-family:'Playfair Display',serif; font-style:italic; font-size:19px; line-height:1.5; color:var(--ink); }
   .pull.big p{ font-size:22px; line-height:1.55; }
 
-  /* ================= TIMELINE ================= */
+  /* ===== TIMELINE ===== */
   .timeline{ margin:4px 0 30px; }
   .tl-title{ text-align:center; font-size:10px; letter-spacing:3px; text-transform:uppercase; color:var(--gold); font-weight:600; margin-bottom:18px; }
   .tl-track{ display:flex; justify-content:space-between; position:relative; }
@@ -97,7 +88,7 @@
   .tl-node:last-child .d{ background:var(--gold); border-color:var(--gold); }
   .tl-node .cap{ font-size:10px; line-height:1.5; color:var(--ink-soft); padding:0 6px; }
 
-  /* ================= CHECK COLUMNS ================= */
+  /* ===== CHECK COLUMNS ===== */
   .cols{ display:grid; grid-template-columns:1fr 1fr; gap:26px 34px; margin-top:6px; }
   .grp-h{ font-size:9.5px; letter-spacing:2.5px; text-transform:uppercase; color:var(--gold); font-weight:600; padding-bottom:7px; border-bottom:1px solid var(--line); margin-bottom:10px; }
   .chk{ list-style:none; }
@@ -105,7 +96,7 @@
   .chk li::before{ content:'\2713'; position:absolute; left:0; top:0; color:var(--gold); font-size:11px; }
   .chk li b{ color:var(--ink); font-weight:600; }
 
-  /* ================= PRICING ================= */
+  /* ===== PRICING ===== */
   .price-wrap{ display:grid; grid-template-columns:1.15fr 1fr; gap:40px; margin-top:8px; }
   .pr-h{ font-size:9.5px; letter-spacing:2.5px; text-transform:uppercase; color:var(--gold); font-weight:600; padding-bottom:9px; border-bottom:1px solid var(--line); margin-bottom:4px; }
   .pr-row{ display:flex; justify-content:space-between; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--line); }
@@ -119,23 +110,47 @@
   .own .o .nm{ font-family:'Playfair Display',serif; font-size:15px; color:var(--ink); margin-bottom:3px; }
   .own .o .ds{ font-size:10.5px; line-height:1.5; color:var(--muted); }
 
-  /* ================= NUMBERED ================= */
+  /* ===== NUMBERED ===== */
   .nums{ display:grid; grid-template-columns:1fr 1fr; gap:26px 40px; margin-top:10px; }
   .nm-item{ display:flex; gap:16px; }
   .nm-item .n{ font-family:'Playfair Display',serif; font-size:34px; line-height:1; color:var(--gold); border-right:1px solid var(--line); padding-right:16px; min-width:46px; text-align:center; }
   .nm-item .tx h4{ font-family:'Playfair Display',serif; font-size:16px; font-weight:600; color:var(--ink); margin-bottom:5px; }
   .nm-item .tx p{ font-size:11px; line-height:1.55; color:var(--ink-soft); }
 
-  /* ================= CLOSING CARD ================= */
+  /* ===== LIVERY (DARK) PAGE ===== */
+  .lv-top{ display:flex; justify-content:space-between; align-items:center; }
+  .lv-top .bci-chip{ background:transparent; padding:0; }
+  .lv-top .bci-chip img{ height:40px; }
+  .lv-top .pg{ font-size:8.5px; letter-spacing:2px; text-transform:uppercase; color:#8f897d; }
+  .lv-kicker{ font-size:10px; letter-spacing:3.5px; text-transform:uppercase; color:var(--bci-red); font-weight:700; margin-top:44px; }
+  .lv-rule{ width:38px; height:2px; background:var(--bci-red); margin:10px 0 18px; }
+  .lv-head{ font-family:'Playfair Display',serif; font-size:42px; line-height:1.12; font-weight:600; color:#FBFAF7; letter-spacing:-0.3px; }
+  .lv-head em{ color:var(--bci-red); font-style:normal; }
+  .lv-body{ font-size:12.5px; line-height:1.85; color:#CFC9BD; max-width:150mm; margin-top:20px; }
+  .lv-body p{ margin-bottom:12px; }
+  .lv-frame{ margin-top:26px; border:1px solid #3a3733; border-radius:6px; background:linear-gradient(135deg,#201e1b,#2b2825); min-height:150px; display:flex; align-items:center; justify-content:center; overflow:hidden; position:relative; }
+  .lv-frame img{ width:100%; display:block; }
+  .lv-frame .ph-cap{ text-align:center; color:#8f897d; font-size:10.5px; letter-spacing:1px; padding:36px 20px; }
+  .lv-frame .ph-cap .big{ font-family:'Playfair Display',serif; font-style:italic; font-size:16px; color:#b4ada0; display:block; margin-bottom:8px; }
+  .lv-palette{ display:flex; gap:14px; margin-top:24px; align-items:center; }
+  .lv-sw{ display:flex; align-items:center; gap:9px; font-size:9px; letter-spacing:1.5px; text-transform:uppercase; color:#a49d90; }
+  .lv-sw .c{ width:22px; height:22px; border-radius:4px; border:1px solid rgba(255,255,255,.15); }
+  .lv-foot{ margin-top:auto; padding-top:18px; border-top:1px solid #322f2b; font-size:9px; letter-spacing:1.5px; text-transform:uppercase; color:#817b70; display:flex; justify-content:space-between; }
+
+  /* ===== CLOSING ===== */
   .closing{ justify-content:center; align-items:center; }
-  .close-card{ background:var(--card); border-radius:4px; padding:56px 56px 48px; width:100%; text-align:center; display:flex; flex-direction:column; align-items:center; }
+  .close-card{ background:var(--card); border-radius:4px; padding:52px 56px 44px; width:100%; text-align:center; display:flex; flex-direction:column; align-items:center; }
+  .close-logo{ height:60px; }
   .close-kicker{ font-size:10px; letter-spacing:3.5px; text-transform:uppercase; color:var(--gold); font-weight:600; margin-top:22px; }
-  .close-rule{ width:34px; height:1.5px; background:var(--gold); margin:10px auto 20px; }
-  .close-head{ font-family:'Playfair Display',serif; font-size:34px; line-height:1.15; font-weight:600; color:var(--ink); }
-  .close-body{ font-size:12.5px; line-height:1.85; color:var(--ink-soft); max-width:430px; margin:20px auto 0; }
-  .close-sig{ font-family:'Playfair Display',serif; font-size:19px; color:var(--ink); margin-top:40px; }
+  .close-rule{ width:34px; height:1.5px; background:var(--gold); margin:10px auto 18px; }
+  .close-head{ font-family:'Playfair Display',serif; font-size:32px; line-height:1.15; font-weight:600; color:var(--ink); }
+  .close-body{ font-size:12.5px; line-height:1.85; color:var(--ink-soft); max-width:440px; margin:18px auto 0; }
+  .close-sig{ font-family:'Playfair Display',serif; font-size:19px; color:var(--ink); margin-top:34px; }
   .close-role{ font-size:9.5px; letter-spacing:1px; color:var(--muted); margin-top:5px; line-height:1.6; }
-  .close-badge{ margin-top:24px; }
+  .close-lockup{ display:flex; align-items:center; gap:16px; margin-top:24px; }
+  .close-lockup .x{ color:var(--gold); font-family:'Playfair Display',serif; font-size:12px; }
+  .close-lockup img.chery{ height:34px; }
+  .close-lockup .bci-chip img{ height:26px; }
 
   @page{ size:A4 portrait; margin:0; }
   @media print{
@@ -147,7 +162,7 @@
 </head>
 <body>
 
-<!-- ============ PAGE 1 · COVER ============ -->
+<!-- ============ 1 · COVER ============ -->
 <section class="sheet cover">
   <div class="confi">
     <span class="r"></span>
@@ -156,31 +171,33 @@
   </div>
 
   <div class="cover-core">
-    <div class="mono"><span>CW</span></div>
-    <div class="cover-brand">CMH Wetland</div>
-    <div class="cover-sub">Chery · Fleet · Supply</div>
-    <div class="cover-lockup"><span class="r"></span>CMH Wetland <span class="x">&times;</span> BCI Security<span class="r"></span></div>
+    <img class="chery cover-logo" src="assets/chery_westrand.png" alt="Chery Westrand">
+    <div class="cover-sub">Authorised Chery Dealer · Fleet Division</div>
+    <div class="cover-lockup">
+      <span class="x serif">A fleet proposal for</span>
+      <span class="bci-chip"><img src="assets/bci_on_dark.png" alt="BCI Security"></span>
+    </div>
 
     <div class="cover-for">For <span class="ph">[Fleet / Operations Manager]</span></div>
     <h1 class="cover-head">The fleet that starts<br>every morning<span class="dot-gold">.</span></h1>
     <div class="cover-intro">
       A security operation is only as dependable as the vehicle that pulls off at the start of a shift. This is a
-      proposal to put fifteen Chery Tiggo Cross on the BCI Security fleet: the right vehicle, one clear price, and
+      proposal to put fifteen Chery Tiggo Cross into BCI Security livery: the right vehicle, one clear price, and
       aftersales built to keep every one of them on the road.
     </div>
     <div class="cover-badge badge">
-      <span class="ring">T</span><span class="label">Chery Tiggo Cross</span>
+      <span class="ring">T</span><span class="label">Chery Tiggo Cross · 15 Units</span>
     </div>
   </div>
 
   <div class="cover-foot">
     <div class="col">
       <div class="lbl">Prepared for</div>
-      <div class="val">BCI Security<small>Fleet procurement</small></div>
+      <span class="bci-chip"><img src="assets/bci_on_dark.png" alt="BCI Security"></span>
     </div>
     <div class="col c">
       <div class="lbl">Prepared by</div>
-      <div class="val"><span class="ph">[Fleet Executive]</span><small>CMH Wetland · Chery</small></div>
+      <div class="val"><span class="ph">[Fleet Executive]</span><small>Chery Westrand · Fleet Division</small></div>
     </div>
     <div class="col r">
       <div class="lbl">Date</div>
@@ -189,18 +206,53 @@
   </div>
 </section>
 
-<!-- ============ PAGE 2 · THE NOTE ============ -->
+<!-- ============ 2 · IN BCI LIVERY (DARK) ============ -->
+<section class="sheet dark">
+  <div class="lv-top">
+    <span class="bci-chip"><img src="assets/bci_on_dark.png" alt="BCI Security"></span>
+    <span class="pg">Chery Westrand × BCI Security · 02</span>
+  </div>
+
+  <div class="lv-kicker">Delivered in your colours</div>
+  <div class="lv-rule"></div>
+  <h1 class="lv-head">A patrol vehicle that<br>reads <em>BCI</em> from a block away.</h1>
+
+  <div class="lv-body">
+    <p>
+      A marked fleet is not decoration. It is deterrence on the street, reassurance for the client whose site you
+      cover, and a rolling advertisement that works every hour your officers are on the road. Fifteen vehicles in
+      full BCI colours put your brand in front of more people in a week than most campaigns reach in a month.
+    </p>
+    <p>
+      Chery Westrand can hand over the fleet already wrapped to your specification: the BCI red and charcoal, your
+      operations number, the fingerprint mark, and unit identifiers, applied to a professional standard and ready
+      for duty on day one. No second trip to a signage shop, no vehicles sitting idle waiting to be branded.
+    </p>
+  </div>
+
+  <div class="lv-frame">
+    <!-- When the BCI-liveried Tiggo Cross render is supplied, replace this caption block with: <img src="assets/tiggo_bci.jpg" alt="BCI-liveried Chery Tiggo Cross"> -->
+    <div class="ph-cap"><span class="big">The Chery Tiggo Cross in full BCI Security livery</span>Supply the approved render and it is placed here, full width, as the hero of this page.</div>
+  </div>
+
+  <div class="lv-palette">
+    <div class="lv-sw"><span class="c" style="background:#F4F4F2;"></span>White</div>
+    <div class="lv-sw"><span class="c" style="background:var(--bci-red);"></span>BCI Red</div>
+    <div class="lv-sw"><span class="c" style="background:#2B2825;"></span>Charcoal</div>
+    <div class="lv-sw" style="margin-left:auto; color:#9c968b;">Livery to BCI brand specification</div>
+  </div>
+
+  <div class="lv-foot">
+    <span>Chery Westrand · Fleet Division</span>
+    <span>Branded fleet supply · Ready for duty on handover</span>
+  </div>
+</section>
+
+<!-- ============ 3 · THE NOTE ============ -->
 <section class="sheet">
   <div class="rh">
-    <div class="rh-top">
-      <span>CMH Wetland · Private &amp; Confidential</span>
-      <span>CMH Wetland × BCI Security · 2 October 2026</span>
-      <span>02</span>
-    </div>
-    <div class="rh-main">
-      <div class="rh-brand"><div class="mono sm"><span>CW</span></div><div class="nm">CMH Wetland</div></div>
-      <div class="rh-right">Chery · Fleet Division &nbsp;|&nbsp; <b>For BCI Security</b></div>
-    </div>
+    <div class="rh-top"><span>Chery Westrand · Private &amp; Confidential</span><span>Chery Westrand × BCI Security · 2 October 2026</span><span>03</span></div>
+    <div class="rh-main"><div class="rh-brand"><img class="chery" src="assets/chery_westrand.png" alt="Chery Westrand"></div><div class="rh-right">Fleet Division &nbsp;|&nbsp; <b>For BCI Security</b></div></div>
     <div class="rh-rule"></div>
   </div>
 
@@ -209,21 +261,22 @@
   <h1 class="display serif">For the team at BCI&nbsp;Security.</h1>
   <div style="margin-top:22px; max-width:150mm;">
     <p class="body">
-      I am writing without being asked, which I hope you will take as a compliment. CMH Wetland supplies vehicles
-      to operators who cannot afford a car that will not start, and a security company is first on that list. I
-      believe we can put a better fleet under your team than you are running today, and do it at a price worth
-      your time to read.
+      I am writing without being asked, which I hope you will take as a compliment. Chery Westrand supplies
+      vehicles to operators who cannot afford a car that will not start, and a security company sits at the very
+      top of that list. I believe we can put a sharper, cheaper, better-backed fleet under your officers than
+      whatever they are driving today, and I would rather show you than tell you.
     </p>
     <p class="body">
       A patrol, a response call, a supervisor moving between sites: none of it happens if the vehicle is in for
-      repairs or drinking fuel it does not need to. The cost of a fleet is not the sticker on the windscreen. It
-      is the mornings it starts, the rand per kilometre, and how quickly it is back on the road after a service.
+      repairs or drinking fuel it does not need to. The real cost of a fleet is never the sticker on the
+      windscreen. It is the mornings it starts, the rand per kilometre, and how fast it is back on the road after
+      a service. That is the number we have built this proposal around.
     </p>
     <p class="body">
-      We recommend the Chery Tiggo Cross 1.5 LiT CVT across all fifteen vehicles. It has the presence a security
-      brand wants on site, a frugal engine, a generous cabin for officers and their equipment, and one of the
-      strongest warranties in its class. The pages that follow set out exactly what it brings, what it costs for
-      fifteen units, and how you can own them.
+      We recommend the Chery Tiggo Cross 1.5 LiT CVT across all fifteen vehicles, delivered in full BCI livery.
+      It has the presence a security brand wants on site, a frugal engine, a generous cabin for officers and their
+      kit, and one of the strongest warranties in its class. The pages that follow show exactly what it brings,
+      what it costs for fifteen units, and how you can own them.
     </p>
     <p class="body">
       There is no fine print here and nothing held back. If a single line does not ring true, tell me and I will
@@ -231,22 +284,15 @@
     </p>
     <p class="body" style="font-family:'Playfair Display',serif; font-style:italic; color:var(--ink); margin-top:18px;">Warmly,</p>
     <div style="font-family:'Playfair Display',serif; font-size:20px; color:var(--ink); margin-top:8px;"><span class="ph">[Fleet Executive Name]</span></div>
-    <div style="font-size:10px; letter-spacing:.5px; color:var(--muted); margin-top:5px;">Fleet Sales, CMH Wetland (Chery) · <span class="ph">[phone]</span> · <span class="ph">[email]</span></div>
+    <div style="font-size:10px; letter-spacing:.5px; color:var(--muted); margin-top:5px;">Fleet Sales, Chery Westrand · <span class="ph">[phone]</span> · <span class="ph">[email]</span></div>
   </div>
 </section>
 
-<!-- ============ PAGE 3 · THE CASE ============ -->
+<!-- ============ 4 · THE CASE ============ -->
 <section class="sheet">
   <div class="rh">
-    <div class="rh-top">
-      <span>CMH Wetland · Private &amp; Confidential</span>
-      <span>CMH Wetland × BCI Security · 2 October 2026</span>
-      <span>03</span>
-    </div>
-    <div class="rh-main">
-      <div class="rh-brand"><div class="mono sm"><span>CW</span></div><div class="nm">CMH Wetland</div></div>
-      <div class="rh-right">Chery · Fleet Division &nbsp;|&nbsp; <b>For BCI Security</b></div>
-    </div>
+    <div class="rh-top"><span>Chery Westrand · Private &amp; Confidential</span><span>Chery Westrand × BCI Security · 2 October 2026</span><span>04</span></div>
+    <div class="rh-main"><div class="rh-brand"><img class="chery" src="assets/chery_westrand.png" alt="Chery Westrand"></div><div class="rh-right">Fleet Division &nbsp;|&nbsp; <b>For BCI Security</b></div></div>
     <div class="rh-rule"></div>
   </div>
 
@@ -258,11 +304,12 @@
     <p class="body">
       The vehicles that let a security operation down are rarely the ones that crash. They are the ones that will
       not start on a cold morning, that sit in a workshop waiting for a part, or that quietly burn a fortune in
-      fuel over a year of long shifts. None of that shows on the day you buy. All of it shows on the balance sheet.
+      fuel over a year of long shifts. None of that shows on the day you buy. All of it shows on the contract you
+      could not cover and the margin you did not keep.
     </p>
     <p class="body">
       The Tiggo Cross 1.5 LiT CVT is chosen here for the unglamorous reasons that matter to a fleet: a claimed
-      7.3 litres per 100 km, an automatic gearbox that reduces driver fatigue across a shift, enough ground
+      7.3 litres per 100 km, an automatic gearbox that keeps officers fresh across a shift, enough ground
       clearance and presence for mixed-condition access roads, and a warranty that caps your downside for years,
       not months. It is a vehicle built to be driven hard and kept cheap.
     </p>
@@ -270,22 +317,15 @@
 
   <div class="pull" style="margin-top:34px; max-width:150mm;">
     <p>Buy fifteen cars and you have an expense. Buy fifteen vehicles that start every morning, cost little to run
-    and come back from a service fast, and you have a fleet that pays you back every shift.</p>
+    and come back from a service fast, and you have a fleet that pays you back on every shift it covers.</p>
   </div>
 </section>
 
-<!-- ============ PAGE 4 · SPEC + TIMELINE ============ -->
+<!-- ============ 5 · SPEC + TIMELINE ============ -->
 <section class="sheet">
   <div class="rh">
-    <div class="rh-top">
-      <span>CMH Wetland · Private &amp; Confidential</span>
-      <span>CMH Wetland × BCI Security · 2 October 2026</span>
-      <span>04</span>
-    </div>
-    <div class="rh-main">
-      <div class="rh-brand"><div class="mono sm"><span>CW</span></div><div class="nm">CMH Wetland</div></div>
-      <div class="rh-right">Chery · Fleet Division &nbsp;|&nbsp; <b>For BCI Security</b></div>
-    </div>
+    <div class="rh-top"><span>Chery Westrand · Private &amp; Confidential</span><span>Chery Westrand × BCI Security · 2 October 2026</span><span>05</span></div>
+    <div class="rh-main"><div class="rh-brand"><img class="chery" src="assets/chery_westrand.png" alt="Chery Westrand"></div><div class="rh-right">Fleet Division &nbsp;|&nbsp; <b>For BCI Security</b></div></div>
     <div class="rh-rule"></div>
   </div>
 
@@ -293,7 +333,7 @@
     <div class="tl-title">From order to on the road</div>
     <div class="tl-track">
       <div class="tl-node"><div class="d"></div><div class="cap">Order placed, spec and colours confirmed</div></div>
-      <div class="tl-node"><div class="d"></div><div class="cap">Inspection, livery and tracking fitted</div></div>
+      <div class="tl-node"><div class="d"></div><div class="cap">Inspection, BCI livery and tracking fitted</div></div>
       <div class="tl-node"><div class="d"></div><div class="cap">Licensing, registration, driver walkthrough</div></div>
       <div class="tl-node"><div class="d"></div><div class="cap">On patrol, first service scheduled</div></div>
     </div>
@@ -347,18 +387,11 @@
   </p>
 </section>
 
-<!-- ============ PAGE 5 · PRICING ============ -->
+<!-- ============ 6 · PRICING ============ -->
 <section class="sheet">
   <div class="rh">
-    <div class="rh-top">
-      <span>CMH Wetland · Private &amp; Confidential</span>
-      <span>CMH Wetland × BCI Security · 2 October 2026</span>
-      <span>05</span>
-    </div>
-    <div class="rh-main">
-      <div class="rh-brand"><div class="mono sm"><span>CW</span></div><div class="nm">CMH Wetland</div></div>
-      <div class="rh-right">Chery · Fleet Division &nbsp;|&nbsp; <b>For BCI Security</b></div>
-    </div>
+    <div class="rh-top"><span>Chery Westrand · Private &amp; Confidential</span><span>Chery Westrand × BCI Security · 2 October 2026</span><span>06</span></div>
+    <div class="rh-main"><div class="rh-brand"><img class="chery" src="assets/chery_westrand.png" alt="Chery Westrand"></div><div class="rh-right">Fleet Division &nbsp;|&nbsp; <b>For BCI Security</b></div></div>
     <div class="rh-rule"></div>
   </div>
 
@@ -380,9 +413,8 @@
       <div class="pr-row total"><span class="k">Fleet of fifteen, net</span><span class="v">R 4 276 620</span></div>
       <p style="font-size:9.5px; color:var(--muted); margin-top:12px; line-height:1.6;">
         Retail is the current Chery South Africa figure and includes VAT. On-the-road costs (licensing,
-        registration, delivery) and options such as livery or tracking are set out separately:
-        OTR <span class="ph">[R 0 000]</span> per unit, livery <span class="ph">[R 0 000]</span>,
-        tracking <span class="ph">[R 0 000]</span>.
+        registration, delivery), BCI livery and tracking are set out separately: OTR <span class="ph">[R 0 000]</span>
+        per unit, livery <span class="ph">[R 0 000]</span>, tracking <span class="ph">[R 0 000]</span>.
       </p>
     </div>
     <div>
@@ -396,47 +428,33 @@
   </div>
 </section>
 
-<!-- ============ PAGE 6 · COMMITMENTS ============ -->
+<!-- ============ 7 · COMMITMENTS ============ -->
 <section class="sheet">
   <div class="rh">
-    <div class="rh-top">
-      <span>CMH Wetland · Private &amp; Confidential</span>
-      <span>CMH Wetland × BCI Security · 2 October 2026</span>
-      <span>06</span>
-    </div>
-    <div class="rh-main">
-      <div class="rh-brand"><div class="mono sm"><span>CW</span></div><div class="nm">CMH Wetland</div></div>
-      <div class="rh-right">Chery · Fleet Division &nbsp;|&nbsp; <b>For BCI Security</b></div>
-    </div>
+    <div class="rh-top"><span>Chery Westrand · Private &amp; Confidential</span><span>Chery Westrand × BCI Security · 2 October 2026</span><span>07</span></div>
+    <div class="rh-main"><div class="rh-brand"><img class="chery" src="assets/chery_westrand.png" alt="Chery Westrand"></div><div class="rh-right">Fleet Division &nbsp;|&nbsp; <b>For BCI Security</b></div></div>
     <div class="rh-rule"></div>
   </div>
 
   <div class="kicker">How it is looked after</div>
   <div class="kicker-rule"></div>
-  <h2 class="display serif">What CMH Wetland commits to.</h2>
+  <h2 class="display serif">What Chery Westrand commits to.</h2>
   <p class="lead" style="margin-top:12px; max-width:150mm;">Buying the vehicles is the easy part. Keeping fifteen of them available is the work, and it is the part we take on.</p>
 
   <div class="nums">
     <div class="nm-item"><div class="n serif">1</div><div class="tx"><h4>One fleet account</h4><p>A single named manager for orders, deliveries, servicing and every query. One number to call.</p></div></div>
     <div class="nm-item"><div class="n serif">2</div><div class="tx"><h4>Uptime by design</h4><p>Servicing staggered across the fleet so you are never short of vehicles, with common parts held.</p></div></div>
     <div class="nm-item"><div class="n serif">3</div><div class="tx"><h4>Warranty that holds</h4><p>5 yr / 150 000 km vehicle and 10 yr / 1 million km engine cover, plus a 3 yr / 45 000 km service plan.</p></div></div>
-    <div class="nm-item"><div class="n serif">4</div><div class="tx"><h4>On the road fast</h4><p>Target delivery of the full fleet within roughly three weeks of order, subject to stock at the time.</p></div></div>
+    <div class="nm-item"><div class="n serif">4</div><div class="tx"><h4>On the road fast</h4><p>Target delivery of the full fleet, wrapped and ready, within roughly three weeks of order, subject to stock.</p></div></div>
     <div class="nm-item"><div class="n serif">5</div><div class="tx"><h4>Priced in the open</h4><p>Every figure confirmed in writing before you sign. No on-delivery surprises, no quiet extras.</p></div></div>
   </div>
 </section>
 
-<!-- ============ PAGE 7 · SAID PLAINLY ============ -->
+<!-- ============ 8 · SAID PLAINLY ============ -->
 <section class="sheet">
   <div class="rh">
-    <div class="rh-top">
-      <span>CMH Wetland · Private &amp; Confidential</span>
-      <span>CMH Wetland × BCI Security · 2 October 2026</span>
-      <span>07</span>
-    </div>
-    <div class="rh-main">
-      <div class="rh-brand"><div class="mono sm"><span>CW</span></div><div class="nm">CMH Wetland</div></div>
-      <div class="rh-right">Chery · Fleet Division &nbsp;|&nbsp; <b>For BCI Security</b></div>
-    </div>
+    <div class="rh-top"><span>Chery Westrand · Private &amp; Confidential</span><span>Chery Westrand × BCI Security · 2 October 2026</span><span>08</span></div>
+    <div class="rh-main"><div class="rh-brand"><img class="chery" src="assets/chery_westrand.png" alt="Chery Westrand"></div><div class="rh-right">Fleet Division &nbsp;|&nbsp; <b>For BCI Security</b></div></div>
     <div class="rh-rule"></div>
   </div>
 
@@ -444,17 +462,17 @@
     <div class="kicker">Said plainly</div>
     <div class="kicker-rule"></div>
     <div class="pull big" style="max-width:158mm; margin-top:8px;">
-      <p>You will not be sold a car. You will be handed a fleet that is ready to work on the morning it arrives,
-      priced in the open with nothing behind it, and backed by one team long after the last vehicle is delivered.
-      That is the whole offer, and we will stand behind every line of it.</p>
+      <p>You will not be sold a car. You will be handed a fleet in your own colours, ready to work on the morning it
+      arrives, priced in the open with nothing behind it, and backed by one team long after the last vehicle is
+      delivered. That is the whole offer, and Chery Westrand will stand behind every line of it.</p>
     </div>
   </div>
 </section>
 
-<!-- ============ PAGE 8 · CLOSING ============ -->
+<!-- ============ 9 · CLOSING ============ -->
 <section class="sheet closing">
   <div class="close-card">
-    <div class="mono"><span>CW</span></div>
+    <img class="chery close-logo" src="assets/chery_westrand.png" alt="Chery Westrand">
     <div class="close-kicker">The next step</div>
     <div class="close-rule"></div>
     <div class="close-head">Let's put fifteen Tiggo<br>Cross on your fleet.</div>
@@ -462,14 +480,18 @@
       You should not have to take any of this on trust. Let me bring a demonstration unit to your team, walk the
       numbers with whoever owns the fleet budget, and leave this proposal with you to weigh. There is no
       obligation and no pressure. If it is not right for BCI Security, we shake hands and I have cost you an hour.
-      If it is, you have fifteen vehicles ready to work. Name a day and I will be there.
+      If it is, you have fifteen vehicles in your colours, ready to work. Name a day and I will be there.
     </div>
     <div class="close-sig serif"><span class="ph">[Fleet Executive Name]</span></div>
-    <div class="close-role">Fleet Sales, CMH Wetland (Chery)<br><span class="ph">[phone]</span> · <span class="ph">[email]</span> · Valid to <span class="ph">[31 October 2026]</span></div>
-    <div class="close-badge badge"><span class="ring">CW</span><span class="label">CMH Wetland</span></div>
+    <div class="close-role">Fleet Sales, Chery Westrand · <span class="ph">[phone]</span> · <span class="ph">[email]</span><br>Valid to <span class="ph">[31 October 2026]</span></div>
+    <div class="close-lockup">
+      <img class="chery" src="assets/chery_westrand.png" alt="Chery Westrand">
+      <span class="x serif">&times;</span>
+      <span class="bci-chip"><img src="assets/bci_on_dark.png" alt="BCI Security"></span>
+    </div>
   </div>
   <div style="margin-top:auto; padding-top:18px; font-size:8px; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted); text-align:center;">
-    Pricing and specifications indicative, subject to confirmation, stock and credit approval · E&amp;OE · Proposal crafted with the MaritiCo document template
+    Pricing and specifications indicative, subject to confirmation, stock and credit approval · E&amp;OE · Crafted with the MaritiCo document template
   </div>
 </section>
 
