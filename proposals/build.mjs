@@ -17,7 +17,7 @@
  * Usage:  NODE_PATH=/opt/node-tools/node_modules node proposals/build.mjs
  */
 import { createRequire } from 'module';
-import { readFileSync, writeFileSync } from 'fs';
+import { readFileSync, writeFileSync, existsSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join, extname } from 'path';
 
@@ -37,9 +37,25 @@ function dataUri(rel) {
   const p = join(ROOT, 'assets', rel);
   const buf = readFileSync(p);
   const ext = extname(p).toLowerCase().replace('.', '');
-  const mime = ext === 'png' ? 'image/png' : 'image/jpeg';
+  const mime = ext === 'svg' ? 'image/svg+xml' : ext === 'png' ? 'image/png' : 'image/jpeg';
   return `data:${mime};base64,${buf.toString('base64')}`;
 }
+
+// Return a data URI for the first logo file that exists, else null (falls back to a text wordmark).
+function findLogo(candidates) {
+  for (const c of candidates) {
+    if (existsSync(join(ROOT, 'assets', c))) return dataUri(c);
+  }
+  return null;
+}
+const cheryLogo = findLogo([
+  'chery-westrand-logo.png', 'chery-westrand-logo.svg', 'chery-westrand-logo.jpg', 'chery-westrand-logo.jpeg',
+  'cmh-westrand-logo.png', 'cmh-westrand-logo.svg', 'cmh-chery-logo.png', 'cmh-logo.png', 'cmh-logo.svg',
+]);
+const bciLogo = findLogo([
+  'bci-security-logo.png', 'bci-security-logo.svg', 'bci-security-logo.jpg', 'bci-security-logo.jpeg',
+  'bci-logo.png', 'bci-logo.svg',
+]);
 const longDateSA = (d = new Date()) =>
   new Intl.DateTimeFormat('en-ZA', { day: 'numeric', month: 'long', year: 'numeric' }).format(d);
 
@@ -113,6 +129,7 @@ const html = `<!DOCTYPE html>
   .brand-lockup .m { font-size:28px; font-weight:800; letter-spacing:-0.5px; color:var(--ink); line-height:1; }
   .brand-lockup .co { font-size:28px; font-weight:800; letter-spacing:0.5px; color:var(--accent); line-height:1; text-transform:uppercase; }
   .brand-lockup .tag { font-size:8.5px; letter-spacing:2px; color:var(--ink-muted); text-transform:uppercase; margin-top:7px; font-weight:500; }
+  .brand-logo { height:56px; width:auto; display:block; }
   .doc-meta { text-align:right; padding:6px 0 0; }
   .doc-title { font-size:18px; font-weight:500; color:var(--ink); letter-spacing:3px; text-transform:uppercase; }
   .doc-num { font-size:10px; color:var(--ink-muted); letter-spacing:1.5px; text-transform:uppercase; margin-top:4px; }
@@ -127,6 +144,7 @@ const html = `<!DOCTYPE html>
   .bci-mark .b { font-weight:800; font-size:18px; color:var(--ink); letter-spacing:0.5px; line-height:1; }
   .bci-mark .s { font-weight:700; font-size:9px; letter-spacing:3px; color:var(--accent); text-transform:uppercase; }
   .addr-for { font-size:8.5px; letter-spacing:2px; text-transform:uppercase; color:var(--ink-muted); font-weight:600; margin-bottom:4px; }
+  .bci-logo { height:46px; width:auto; display:block; margin-bottom:7px; border-radius:3px; }
   .subject { font-size:13px; color:var(--ink); font-weight:600; margin-bottom:20px; padding-bottom:10px; border-bottom:1px solid var(--line); }
   p { margin-bottom:11px; color:var(--ink-soft); }
   h2 { font-size:14px; font-weight:600; color:var(--ink); margin-top:26px; margin-bottom:12px; padding-bottom:6px;
@@ -230,8 +248,9 @@ const html = `<!DOCTYPE html>
   <div class="header">
     <div class="header-content">
       <div class="brand-lockup">
-        <div class="text"><span class="m">CMH</span><span class="co">Westrand</span></div>
-        <div class="tag">${esc(D.dealership.tag)}</div>
+        ${cheryLogo
+          ? `<img class="brand-logo" src="${cheryLogo}" alt="CHERY Westrand"><div class="tag" style="margin-top:9px">${esc(D.dealership.tag)}</div>`
+          : `<div class="text"><span class="m">CMH</span><span class="co">Westrand</span></div><div class="tag">${esc(D.dealership.tag)}</div>`}
       </div>
       <div class="doc-meta">
         <div class="doc-title">${esc(D.meta.docTitle)}</div>
@@ -244,7 +263,9 @@ const html = `<!DOCTYPE html>
     <div class="date-line">${ce(today)}</div>
     <div class="addressee">
       <div class="addr-for">Prepared for</div>
-      <div class="bci-mark"><span class="b">BCI</span><span class="s">Security</span></div>
+      ${bciLogo
+        ? `<img class="bci-logo" src="${bciLogo}" alt="BCI Security">`
+        : `<div class="bci-mark"><span class="b">BCI</span><span class="s">Security</span></div>`}
       <div>${ce(D.client.attention)}</div>
       <div>${ce(D.client.addressLine1)}</div>
     </div>
