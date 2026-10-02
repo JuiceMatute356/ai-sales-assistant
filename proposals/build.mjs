@@ -129,7 +129,7 @@ const html = `<!DOCTYPE html>
   .brand-lockup .m { font-size:28px; font-weight:800; letter-spacing:-0.5px; color:var(--ink); line-height:1; }
   .brand-lockup .co { font-size:28px; font-weight:800; letter-spacing:0.5px; color:var(--accent); line-height:1; text-transform:uppercase; }
   .brand-lockup .tag { font-size:8.5px; letter-spacing:2px; color:var(--ink-muted); text-transform:uppercase; margin-top:7px; font-weight:500; }
-  .brand-logo { height:56px; width:auto; display:block; }
+  .brand-logo { height:70px; width:auto; display:block; }
   .doc-meta { text-align:right; padding:6px 0 0; }
   .doc-title { font-size:18px; font-weight:500; color:var(--ink); letter-spacing:3px; text-transform:uppercase; }
   .doc-num { font-size:10px; color:var(--ink-muted); letter-spacing:1.5px; text-transform:uppercase; margin-top:4px; }
@@ -144,7 +144,7 @@ const html = `<!DOCTYPE html>
   .bci-mark .b { font-weight:800; font-size:18px; color:var(--ink); letter-spacing:0.5px; line-height:1; }
   .bci-mark .s { font-weight:700; font-size:9px; letter-spacing:3px; color:var(--accent); text-transform:uppercase; }
   .addr-for { font-size:8.5px; letter-spacing:2px; text-transform:uppercase; color:var(--ink-muted); font-weight:600; margin-bottom:4px; }
-  .bci-logo { height:46px; width:auto; display:block; margin-bottom:7px; border-radius:3px; }
+  .bci-logo { height:50px; width:auto; display:block; margin-bottom:7px; border-radius:3px; }
   .subject { font-size:13px; color:var(--ink); font-weight:600; margin-bottom:20px; padding-bottom:10px; border-bottom:1px solid var(--line); }
   p { margin-bottom:11px; color:var(--ink-soft); }
   h2 { font-size:14px; font-weight:600; color:var(--ink); margin-top:26px; margin-bottom:12px; padding-bottom:6px;
