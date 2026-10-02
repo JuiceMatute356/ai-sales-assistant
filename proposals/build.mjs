@@ -123,6 +123,10 @@ const html = `<!DOCTYPE html>
   .date-line { color:var(--ink-muted); font-size:11px; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:20px; }
   .addressee { margin-bottom:20px; font-size:12px; color:var(--ink-soft); }
   .addressee .name { color:var(--ink); font-weight:600; font-size:13px; }
+  .bci-mark { display:inline-flex; align-items:baseline; gap:5px; margin-bottom:5px; }
+  .bci-mark .b { font-weight:800; font-size:18px; color:var(--ink); letter-spacing:0.5px; line-height:1; }
+  .bci-mark .s { font-weight:700; font-size:9px; letter-spacing:3px; color:var(--accent); text-transform:uppercase; }
+  .addr-for { font-size:8.5px; letter-spacing:2px; text-transform:uppercase; color:var(--ink-muted); font-weight:600; margin-bottom:4px; }
   .subject { font-size:13px; color:var(--ink); font-weight:600; margin-bottom:20px; padding-bottom:10px; border-bottom:1px solid var(--line); }
   p { margin-bottom:11px; color:var(--ink-soft); }
   h2 { font-size:14px; font-weight:600; color:var(--ink); margin-top:26px; margin-bottom:12px; padding-bottom:6px;
@@ -239,7 +243,8 @@ const html = `<!DOCTYPE html>
   <div class="body">
     <div class="date-line">${ce(today)}</div>
     <div class="addressee">
-      <div class="name">${ce(D.client.name)}</div>
+      <div class="addr-for">Prepared for</div>
+      <div class="bci-mark"><span class="b">BCI</span><span class="s">Security</span></div>
       <div>${ce(D.client.attention)}</div>
       <div>${ce(D.client.addressLine1)}</div>
     </div>
@@ -345,7 +350,10 @@ const html = `<!DOCTYPE html>
 // ---- write + render ------------------------------------------------------
 const outHtml = join(ROOT, 'output', 'BCI_Security_Fleet_Mobility_Proposal.html');
 const outPdf = join(ROOT, 'output', 'BCI_Security_Fleet_Mobility_Proposal.pdf');
+const outShare = join(ROOT, 'output', 'BCI_Security_Fleet_Mobility_Proposal.share.html');
 writeFileSync(outHtml, html, 'utf8');
+// Client-facing interactive page: no inline editing, keeps the Print / Save PDF button.
+writeFileSync(outShare, html.replace(/ contenteditable="true"/g, ''), 'utf8');
 
 const browser = await chromium.launch();
 const page = await browser.newPage();
